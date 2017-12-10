@@ -70,8 +70,8 @@ webpackJsonp([15178676390636814000],{
 	
 	exports.components = {
 	  "component---node-modules-gatsby-plugin-offline-app-shell-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---node-modules-gatsby-plugin-offline-app-shell-js!./node_modules/gatsby-plugin-offline/app-shell.js"),
-	  "component---src-templates-lesson-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-templates-lesson-jsx!./src/templates/lesson.jsx"),
 	  "component---src-templates-post-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-templates-post-jsx!./src/templates/post.jsx"),
+	  "component---src-templates-lesson-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-templates-lesson-jsx!./src/templates/lesson.jsx"),
 	  "component---src-templates-tag-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-templates-tag-jsx!./src/templates/tag.jsx"),
 	  "component---src-templates-category-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-templates-category-jsx!./src/templates/category.jsx"),
 	  "component---src-pages-about-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-about-jsx!./src/pages/about.jsx"),
@@ -81,7 +81,7 @@ webpackJsonp([15178676390636814000],{
 	exports.json = (_exports$json = {
 	  "layout-index.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"),
 	  "offline-plugin-app-shell-fallback.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---offline-plugin-app-shell-fallback!./.cache/json/offline-plugin-app-shell-fallback.json")
-	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-three.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-three!./.cache/json/lesson-three.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-one.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-one!./.cache/json/lesson-one.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["post-one.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---post-one!./.cache/json/post-one.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-two.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-two!./.cache/json/lesson-two.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-programming.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-programming!./.cache/json/tags-programming.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-stuff.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-stuff!./.cache/json/tags-stuff.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-other.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-other!./.cache/json/tags-other.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["categories-tech.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---categories-tech!./.cache/json/categories-tech.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["about.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---about!./.cache/json/about.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json"), _exports$json);
+	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["post-one.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---post-one!./.cache/json/post-one.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-one.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-one!./.cache/json/lesson-one.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-three.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-three!./.cache/json/lesson-three.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["lesson-two.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---lesson-two!./.cache/json/lesson-two.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-programming.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-programming!./.cache/json/tags-programming.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-stuff.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-stuff!./.cache/json/tags-stuff.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["tags-other.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---tags-other!./.cache/json/tags-other.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["categories-tech.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---categories-tech!./.cache/json/categories-tech.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["about.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---about!./.cache/json/about.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json"), _exports$json);
 	
 	exports.layouts = {
 	  "component---src-layouts-index-jsx": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-layouts-index-jsx!./.cache/layouts/index.js")
@@ -959,11 +959,11 @@ webpackJsonp([15178676390636814000],{
 			"path": "/offline-plugin-app-shell-fallback/"
 		},
 		{
-			"componentChunkName": "component---src-templates-lesson-jsx",
+			"componentChunkName": "component---src-templates-post-jsx",
 			"layout": "index",
 			"layoutComponentChunkName": "component---src-layouts-index-jsx",
-			"jsonName": "lesson-three.json",
-			"path": "/lesson-three"
+			"jsonName": "post-one.json",
+			"path": "/post-one"
 		},
 		{
 			"componentChunkName": "component---src-templates-lesson-jsx",
@@ -973,11 +973,11 @@ webpackJsonp([15178676390636814000],{
 			"path": "/lesson-one"
 		},
 		{
-			"componentChunkName": "component---src-templates-post-jsx",
+			"componentChunkName": "component---src-templates-lesson-jsx",
 			"layout": "index",
 			"layoutComponentChunkName": "component---src-layouts-index-jsx",
-			"jsonName": "post-one.json",
-			"path": "/post-one"
+			"jsonName": "lesson-three.json",
+			"path": "/lesson-three"
 		},
 		{
 			"componentChunkName": "component---src-templates-lesson-jsx",
@@ -2514,4 +2514,4 @@ webpackJsonp([15178676390636814000],{
 /***/ })
 
 });
-//# sourceMappingURL=app-709972a57c9fd73fa776.js.map
+//# sourceMappingURL=app-ea7b1e2c24638f76cf4b.js.map
