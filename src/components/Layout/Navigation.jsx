@@ -7,15 +7,15 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: ${props => props.theme.brand};  
+  background: none;  
   .nav-link {
     font-size: 1.6rem;
     margin-right: 10px;
     font-weight: 200;
-    color: ${props => props.theme.accent};         
+    color: ${props => props.theme.brand};         
   }  
   .nav-link:hover {
-    border-color: ${props => props.theme.accent};     
+    border-color: ${props => props.theme.brand};     
   }
 `
 

@@ -33,7 +33,7 @@ class MainHeader extends React.Component {
 }
 
 const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.brand};
+  background: ${props => props.theme.accent};  
   padding: ${props => props.theme.sitePadding};
   text-align: center;
 `
