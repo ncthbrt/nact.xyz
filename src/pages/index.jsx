@@ -23,9 +23,11 @@ class Index extends React.Component {
             logo={config.siteLogo}
           />
           <BodyContainer>
-            <h2>A Gatsby Template for Content</h2>
-            <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
-            <CtaButton to={'/lesson-one'}>See Your First Post</CtaButton>
+            <BodyContents>
+              <h2>A Gatsby Template for Content</h2>
+              <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
+              <CtaButton to={'/docs/reasonml/introduction'}>See Your First Post</CtaButton>
+            </BodyContents>
           </BodyContainer>
         </main>
       </div>
@@ -36,9 +38,15 @@ class Index extends React.Component {
 export default Index;
 
 const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-  max-width: ${props => props.theme.contentWidthLaptop};
-  margin: 0 auto;
+  padding: ${props => props.theme.sitePadding};  
+  background: ${props => props.theme.brand};
+  display: flex;
+  flex: 1;  
+`
+const BodyContents = styled.div`
+margin: 0 auto;
+max-width: ${props => props.theme.contentWidthLaptop};
+color:  ${props => props.theme.accent};
 `
 
 

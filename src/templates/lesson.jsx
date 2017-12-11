@@ -9,10 +9,11 @@ import TableOfContents from "../components/Layout/TableOfContents";
 
 export default class LessonTemplate extends React.Component {
   render() {
-    const { slug } = this.props.pathContext;
+    const { slug } = this.props.pathContext;    
+    
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
-    if (!post.id) {
+    if (!post.id) {      
       post.id = slug;
     }
     if (!post.id) {
@@ -31,7 +32,7 @@ export default class LessonTemplate extends React.Component {
           <ToCContainer>
             <TableOfContents
               posts={this.props.data.allPostTitles.edges}
-              contentsType="lesson"
+              contentsType="lesson"              
               chapterTitles={config.toCChapters}
             />
           </ToCContainer>
@@ -89,15 +90,17 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!) {
-    allPostTitles: allMarkdownRemark{
+  query LessonBySlug($slug: String!, $category: String!) {
+    allPostTitles: allMarkdownRemark(filter: { frontmatter: { category:{ eq: $category }}}){
         edges {
           node {
             frontmatter {
               title
               lesson
+              category
               chapter
               type
+              language
             }
             fields {
               slug
@@ -115,6 +118,7 @@ export const pageQuery = graphql`
           date
           category
           tags
+          language
         }
         fields {
           slug

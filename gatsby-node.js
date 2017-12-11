@@ -88,10 +88,11 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             })
           } else {
             createPage({
-              path: edge.node.fields.slug,
+              path: `/docs/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
               component: lessonPage,
               context: {
-                slug: edge.node.fields.slug
+                slug: edge.node.fields.slug,
+                category: edge.node.frontmatter.category
               }
             })
           }

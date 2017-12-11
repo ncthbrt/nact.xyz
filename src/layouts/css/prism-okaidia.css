@@ -71,13 +71,10 @@ pre[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    box-shadow: 0.05555555555555555rem 0.05555555555555555rem 1.1111111111111112rem rgba(20,20,20,0.37);
+    /* box-shadow: 0.05555555555555555rem 0.05555555555555555rem 1.1111111111111112rem rgba(20,20,20,0.37); */
 }
 
-code {
-    font-family: 'Fira Code', monospace;
-    font-variant-ligatures: contextual !important;
-}
+
 
 /* Code blocks */
 pre[class*="language-"] {

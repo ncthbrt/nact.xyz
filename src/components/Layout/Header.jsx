@@ -7,24 +7,24 @@ class MainHeader extends React.Component {
     if (this.props.location) {
       if (this.props.location.pathname === '/') {
         return (
-          <IndexHeadContainer>
-            <Navigation />
+          <IndexHeadContainer>          
             <Hero>
-              <img src={this.props.logo} width='150px' />
-              <h1>{this.props.siteTitle}</h1>
-              <h4>{this.props.siteDescription}</h4>
+              <img src={this.props.logo} style={{maxWidth:'80vw', maxHeight:'70vh' }} />
+              <p>nact ⇒ node.js + actors</p>
+              <p style={{fontStyle: 'italic'}}> your services have never been so µ</p>              
             </Hero>
+            <Navigation />
           </IndexHeadContainer>
         )
       } else {
         return (
           <SiteContainer>
-            <Navigation />
+            <Navigation isSubpage />
           </SiteContainer>
         )
       }
     }
-    return <div></div>
+    return <div></div>;
   }
 
   render() {

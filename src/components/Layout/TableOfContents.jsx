@@ -9,13 +9,14 @@ import styled from 'styled-components'
 class TableOfContents extends React.Component {
   buildNodes() {
     const {posts} = this.props
-    const type = this.props.contentsType
-    const postNodes = []
+    const type = this.props.contentsType    
+    const postNodes = [];
     posts.forEach(post => {
-      if (post.node.frontmatter.type === type) {
+      if (post.node.frontmatter.type === type) {                
         const postNode = {
           title: post.node.frontmatter.title,
           path: post.node.fields.slug,
+          category: post.node.frontmatter.category,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter
         }
@@ -61,7 +62,7 @@ class TableOfContents extends React.Component {
       listItems.push(
         <li className='chapter'>
           <h5 className='tocHeading'>
-            {chapterTitles[idx].toUpperCase()}
+            {chapterTitles[idx]}
           </h5>
           <ul className='chapterItems'>
             {chapterLessons}

@@ -37,9 +37,6 @@ li, li > *, dt, dd {
     margin: 10px 0;
 }
 
-pre, code {
-    font-family: 'Space Mono', monospace;
-}
 
 h1 {font-size: 4rem;}
 h2 {font-size: 3.5rem;}
