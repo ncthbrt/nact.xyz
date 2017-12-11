@@ -7,7 +7,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: none;  
+  background: ${props => props.theme.accent};  
   .nav-link {
     font-size: 1.6rem;
     margin-right: 10px;
