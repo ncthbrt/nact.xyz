@@ -80,7 +80,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 
           if (edge.node.frontmatter.type === 'post') {
             createPage({
-              path: edge.node.fields.slug,
+              path: `/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
               component: postPage,
               context: {
                 slug: edge.node.fields.slug
@@ -88,7 +88,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             })
           } else {
             createPage({
-              path: `/docs/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
+              path: `/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
               component: lessonPage,
               context: {
                 slug: edge.node.fields.slug,

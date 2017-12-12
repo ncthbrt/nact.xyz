@@ -26,7 +26,7 @@ class Index extends React.Component {
             <BodyContents>
               <h2>A Gatsby Template for Content</h2>
               <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
-              <CtaButton to={'/docs/reasonml/introduction'}>See Your First Post</CtaButton>
+              <CtaButton to={'/lesson/reasonml/introduction'}>See Your First Post</CtaButton>
             </BodyContents>
           </BodyContainer>
         </main>

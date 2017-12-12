@@ -1,5 +1,5 @@
 ---
-title: "Getting Started 3"
+title: "Stateful Actors"
 lesson: 2
 chapter: 2
 cover: "https://unsplash.it/400/300/?random?BoldMage"

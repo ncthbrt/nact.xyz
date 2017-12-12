@@ -99,8 +99,7 @@ export const pageQuery = graphql`
               lesson
               category
               chapter
-              type
-              language
+              type              
             }
             fields {
               slug
@@ -118,7 +117,6 @@ export const pageQuery = graphql`
           date
           category
           tags
-          language
         }
         fields {
           slug
