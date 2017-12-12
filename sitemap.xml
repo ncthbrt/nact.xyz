@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://nact.io/offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/docs/reasonml/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/post-one</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/docs/reasonml/actor-communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/docs/reasonml/persistence</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/docs/reasonml/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/docs/reasonml/getting-started-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/docs/reasonml/actor-communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/docs/reasonml/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/docs/reasonml/persistence</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/docs/reasonml/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/docs/reasonml/snapshotting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/docs/reasonml/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/docs/reasonml/timeouts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/tags/programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/tags/stuff/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/tags/other/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/nact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/reason/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/bucklescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/stuff/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/other/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/categories/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/categories/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

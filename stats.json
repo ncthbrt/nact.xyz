@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---tags-reason": [
-      "path---tags-reason-2c3df23023282b0b7544.js",
-      "path---tags-reason-2c3df23023282b0b7544.js.map"
+      "path---tags-reason-15cc15eaa989162ce9c1.js",
+      "path---tags-reason-15cc15eaa989162ce9c1.js.map"
     ],
     "path---tags-other": [
       "path---tags-other-f070efcd65c53db0824b.js",
@@ -13,12 +13,12 @@
       "path---tags-programming-fb4560a04bf47d19d9c2.js.map"
     ],
     "path---docs-reasonml-actor-communication": [
-      "path---docs-reasonml-actor-communication-5572d6cfdf67dd670408.js",
-      "path---docs-reasonml-actor-communication-5572d6cfdf67dd670408.js.map"
+      "path---docs-reasonml-actor-communication-33d39dcc5d2fecb029ec.js",
+      "path---docs-reasonml-actor-communication-33d39dcc5d2fecb029ec.js.map"
     ],
     "path---docs-reasonml-getting-started": [
-      "path---docs-reasonml-getting-started-57416619e24a66ba59f6.js",
-      "path---docs-reasonml-getting-started-57416619e24a66ba59f6.js.map"
+      "path---docs-reasonml-getting-started-10bc8d1f52e7f68b7fae.js",
+      "path---docs-reasonml-getting-started-10bc8d1f52e7f68b7fae.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
@@ -37,28 +37,28 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---docs-reasonml-querying": [
-      "path---docs-reasonml-querying-b5f7d445c8941de5b7a7.js",
-      "path---docs-reasonml-querying-b5f7d445c8941de5b7a7.js.map"
+      "path---docs-reasonml-querying-f3e87f5de7bd9dd9c5e5.js",
+      "path---docs-reasonml-querying-f3e87f5de7bd9dd9c5e5.js.map"
     ],
     "component---src-templates-lesson-jsx": [
-      "component---src-templates-lesson-jsx-c1117cac3df24613375f.js",
-      "component---src-templates-lesson-jsx-c1117cac3df24613375f.js.map"
+      "component---src-templates-lesson-jsx-8da5cf40ed3d18d72f52.js",
+      "component---src-templates-lesson-jsx-8da5cf40ed3d18d72f52.js.map"
     ],
     "path---docs-reasonml-getting-started-3": [
-      "path---docs-reasonml-getting-started-3-45bf9f4abd726dac8a00.js",
-      "path---docs-reasonml-getting-started-3-45bf9f4abd726dac8a00.js.map"
+      "path---docs-reasonml-getting-started-3-1b52272fb01a3f8df5c0.js",
+      "path---docs-reasonml-getting-started-3-1b52272fb01a3f8df5c0.js.map"
     ],
     "component---src-templates-category-jsx": [
       "component---src-templates-category-jsx-3a50fee79b9519c47f96.js",
       "component---src-templates-category-jsx-3a50fee79b9519c47f96.js.map"
     ],
     "path---index": [
-      "path---index-30ee0e34d21c48bd6315.js",
-      "path---index-30ee0e34d21c48bd6315.js.map"
+      "path---index-0d65d84787bca62f51e0.js",
+      "path---index-0d65d84787bca62f51e0.js.map"
     ],
     "component---src-pages-about-jsx": [
-      "component---src-pages-about-jsx-bafcf7c3f83911e3fa6a.js",
-      "component---src-pages-about-jsx-bafcf7c3f83911e3fa6a.js.map"
+      "component---src-pages-about-jsx-abe8799b7c6cf0a4148d.js",
+      "component---src-pages-about-jsx-abe8799b7c6cf0a4148d.js.map"
     ],
     "path---post-one": [
       "path---post-one-c5ce1d4b08a57ad8cf05.js",
@@ -73,16 +73,16 @@
       "component---src-templates-tag-jsx-6d724a4bbcff12c3ea7c.js.map"
     ],
     "path---docs-reasonml-timeouts": [
-      "path---docs-reasonml-timeouts-99ce83c4bcd8335eb6e6.js",
-      "path---docs-reasonml-timeouts-99ce83c4bcd8335eb6e6.js.map"
+      "path---docs-reasonml-timeouts-ed9d24ce9cce56a990c7.js",
+      "path---docs-reasonml-timeouts-ed9d24ce9cce56a990c7.js.map"
     ],
     "path---docs-reasonml-snapshotting": [
-      "path---docs-reasonml-snapshotting-bfa307c205b8d67af834.js",
-      "path---docs-reasonml-snapshotting-bfa307c205b8d67af834.js.map"
+      "path---docs-reasonml-snapshotting-a3bc07950befe1ceb6b0.js",
+      "path---docs-reasonml-snapshotting-a3bc07950befe1ceb6b0.js.map"
     ],
     "path---tags-getting-started": [
-      "path---tags-getting-started-4ab9791c44bcb1b9cd90.js",
-      "path---tags-getting-started-4ab9791c44bcb1b9cd90.js.map"
+      "path---tags-getting-started-075cb2e84f05cd473107.js",
+      "path---tags-getting-started-075cb2e84f05cd473107.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
@@ -93,32 +93,32 @@
       "component---src-templates-post-jsx-0d8d9adde2927da520c2.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-8328bc1a281c89fe520e.js",
-      "component---src-pages-index-jsx-8328bc1a281c89fe520e.js.map"
+      "component---src-pages-index-jsx-e1f76e0c5f5c2b741740.js",
+      "component---src-pages-index-jsx-e1f76e0c5f5c2b741740.js.map"
     ],
     "path---tags-nact": [
-      "path---tags-nact-5b96bcc90c51da28fe72.js",
-      "path---tags-nact-5b96bcc90c51da28fe72.js.map"
+      "path---tags-nact-f83233a42a62a6628d78.js",
+      "path---tags-nact-f83233a42a62a6628d78.js.map"
     ],
     "app": [
-      "app-9d2dd48dfc4858c5b1a4.js",
-      "app-9d2dd48dfc4858c5b1a4.js.map"
+      "app-fd4d73061008817a73cb.js",
+      "app-fd4d73061008817a73cb.js.map"
     ],
     "path---categories-reasonml": [
-      "path---categories-reasonml-b5bb393562aae09f633b.js",
-      "path---categories-reasonml-b5bb393562aae09f633b.js.map"
+      "path---categories-reasonml-07955017d5d0a481a374.js",
+      "path---categories-reasonml-07955017d5d0a481a374.js.map"
     ],
     "path---docs-reasonml-introduction": [
-      "path---docs-reasonml-introduction-14660dc3332a76afa3ae.js",
-      "path---docs-reasonml-introduction-14660dc3332a76afa3ae.js.map"
+      "path---docs-reasonml-introduction-f90fadf37c38787bcdd6.js",
+      "path---docs-reasonml-introduction-f90fadf37c38787bcdd6.js.map"
     ],
     "path---docs-reasonml-persistence": [
-      "path---docs-reasonml-persistence-0ea86546ffc818cc8dc6.js",
-      "path---docs-reasonml-persistence-0ea86546ffc818cc8dc6.js.map"
+      "path---docs-reasonml-persistence-84d597698fdf9ff61bca.js",
+      "path---docs-reasonml-persistence-84d597698fdf9ff61bca.js.map"
     ],
     "path---tags-bucklescript": [
-      "path---tags-bucklescript-94740737e7583a3bde30.js",
-      "path---tags-bucklescript-94740737e7583a3bde30.js.map"
+      "path---tags-bucklescript-6b7b7506147f06c07359.js",
+      "path---tags-bucklescript-6b7b7506147f06c07359.js.map"
     ],
     "path---tags-stuff": [
       "path---tags-stuff-077a31247ed496488147.js",
