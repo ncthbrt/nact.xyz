@@ -1,6 +1,6 @@
 ---
 title: "Stateful Actors"
-lesson: 2
+lesson: 1
 chapter: 2
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"

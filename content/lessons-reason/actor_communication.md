@@ -1,6 +1,6 @@
 ---
 title: "Actor Communication"
-lesson: 3
+lesson: 2
 chapter: 2
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"
