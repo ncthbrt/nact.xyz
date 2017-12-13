@@ -15,6 +15,17 @@ table, th, td {
     padding: 5px;
 }
 
+blockquote {
+    border-left: 0.3em dotted #FC5B5B;
+    padding-left: 1em;
+    font-style: italic;
+    line-height: 2;
+}
+
+p {
+    line-height: 1.5;
+}
+
 /**********
  Text
 ***********/
