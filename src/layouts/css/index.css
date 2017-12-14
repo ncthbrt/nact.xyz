@@ -41,7 +41,7 @@ table, th, td {
 }
 
 blockquote {
-    border-left: 0.3em dotted #FC5B5B;
+    border-left: 0.3em dotted;       
     padding-left: 1em;
     font-style: italic;
     line-height: 2;

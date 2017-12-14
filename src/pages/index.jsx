@@ -1,34 +1,33 @@
-import React from "react"
-import Helmet from "react-helmet"
-import styled from "styled-components"
+import React from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
-import SEO from "../components/SEO/SEO"
-import config from "../../data/SiteConfig"
-import MainHeader from '../components/Layout/Header'
-import CtaButton from '../components/CtaButton'
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
+import MainHeader from '../components/Layout/Header';
+import CtaButton from '../components/CtaButton';
 
 class Index extends React.Component {
-
-  render() {
+  render () {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <div className="index-container">
+      <div className='index-container'>
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <main style={{minHeight : '100vh', display: 'flex', flexDirection: 'column'}}>
+        <main style={{minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
           <MainHeader
             siteTitle={config.siteTitle}
             siteDescription={config.siteDescription}
             location={this.props.location}
             logo={config.siteLogo}
           />
-          <BodyContainer>
+          <BodyContainer1>
             <BodyContents>
-              <h2>A Gatsby Template for Content</h2>
+              <h2>Nact</h2>
               <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
               <CtaButton to={'/lesson/reasonml/introduction'}>See Your First Post</CtaButton>
             </BodyContents>
-          </BodyContainer>
+          </BodyContainer1>
         </main>
       </div>
     );
@@ -37,20 +36,20 @@ class Index extends React.Component {
 
 export default Index;
 
-const BodyContainer = styled.div`
+const BodyContainer1 = styled.div`
   padding: ${props => props.theme.sitePadding};  
   background: ${props => props.theme.brand};
   display: flex;
   flex: 1;  
-`
+`;
+
 const BodyContents = styled.div`
 margin: 0 auto;
 max-width: ${props => props.theme.contentWidthLaptop};
 color:  ${props => props.theme.accent};
-`
+`;
 
-
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(

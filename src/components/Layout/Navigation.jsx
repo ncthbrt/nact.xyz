@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+require('../../../node_modules/animate.css/animate.min.css');
 
 const NavContainer = styled.div`
   display: flex;
@@ -31,10 +32,11 @@ class Navigation extends React.Component {
              : undefined
           }
         </section>
-        <section>
+        <section style={{animationDelay: '350ms'}} className={this.props.isSubpage ? ' ' : 'animated fadeIn'}>
           <Link className='nav-link' to='/lesson/javascript/introduction'> <img alt='javascript' style={{height: '1em'}} src={`/logos/language-logo_js${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link>
           <span className='nav-link' style={{height: '1em'}}>/</span>
           <Link className='nav-link' to='/lesson/reasonml/introduction' > <img alt='reason' style={{height: '1em'}} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link>
+          <Link className='nav-link' to='/blog' > BLOG </Link>
           <Link className='nav-link' to='/contact' > COMMUNITY </Link>
           <a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a>
         </section>
@@ -43,5 +45,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation
-;
+export default Navigation;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navigation from './Navigation';
+require('../../../node_modules/animate.css/animate.min.css');
 
 class MainHeader extends React.Component {
   getHeader () {
@@ -9,10 +10,10 @@ class MainHeader extends React.Component {
         return (
           <IndexHeadContainer>
             <Navigation />
-            <Hero>
-              <img src={this.props.logo} style={{ maxWidth: '80vw', maxHeight: '70vh' }} />
-              <p>nact ⇒ node.js + actors</p>
-              <p style={{ fontStyle: 'italic' }}> your services have never been so µ</p>
+            <Hero >
+              <img className='animated flipInX' src={this.props.logo} style={{ maxWidth: '80vw', maxHeight: '70vh' }} />
+              <Title className='animated fadeIn'>nact ⇒ node.js + actors</Title>
+              <SubTitle className='animated fadeIn' style={{ fontStyle: 'italic' }}> your services have never been so µ</SubTitle>
             </Hero>
           </IndexHeadContainer>
         );
@@ -31,6 +32,12 @@ class MainHeader extends React.Component {
     return this.getHeader();
   }
 }
+const Title = styled.p`
+animation-delay: 250ms;
+`;
+const SubTitle = styled.p`
+  animation-delay: 350ms;
+`;
 
 const IndexHeadContainer = styled.div`
   background: ${props => props.theme.accent};  

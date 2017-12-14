@@ -1,22 +1,21 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled from "styled-components"
+import React from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
-import UserInfo from "../components/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-
+import UserInfo from '../components/UserInfo';
+import Disqus from '../components/Disqus/Disqus';
+import PostTags from '../components/PostTags/PostTags';
+import SocialLinks from '../components/SocialLinks/SocialLinks';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
+import './b16-tomorrow-dark.css';
 
 const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
-`
+`;
 
 export default class PostTemplate extends React.Component {
-  render() {
+  render () {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
@@ -37,7 +36,7 @@ export default class PostTemplate extends React.Component {
             {post.title}
           </h1>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
+          <div className='post-meta'>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
@@ -49,7 +48,7 @@ export default class PostTemplate extends React.Component {
   }
 }
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
