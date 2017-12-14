@@ -47,7 +47,7 @@
     font-weight: 700;
     font-style: normal;
 }
-    
+
 .gatsby-highlight {
     padding-bottom: 30px;
 }
@@ -81,7 +81,7 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 :not(pre) > code[class*="language-"],

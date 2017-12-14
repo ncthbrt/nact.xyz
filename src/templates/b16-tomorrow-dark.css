@@ -64,7 +64,7 @@ pre[class*="language-"] {
 
 code {
     font-family: 'Fira Code', monospace;
-    font-variant-ligatures: contextual !important;    
+    font-variant-ligatures: contextual !important;        
 }
 
 pre[class*="language-"]::-moz-selection,

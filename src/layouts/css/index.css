@@ -4,7 +4,32 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+
+.remix-button:hover {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.remix-button:hover > * {
+    text-decoration: underline;
+}
+
+.remix-button button {
+    border: 2px solid #FC5B5B;
+    color: #FC5B5B;
+    background: transparent;    
+    border-radius: 5px; 
+    padding: 10px;
+    cursor: pointer;
+    height: 4em;
+    width: 8em;
+    font-size: 10pt;        
+}
+
+.remix-button button img {
+    height:1em;
 }
 
 table {

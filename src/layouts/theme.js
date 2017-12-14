@@ -2,7 +2,7 @@ const theme = {
   // named colors:
   brand: '#FC5B5B',
   accent: 'white',
-  accentDark: "#35495E",
+  accentDark: '#35495E',
   lightGrey: '#F6F6F6',
   darkGrey: '#91a2a3',
   ink: 'black',
@@ -12,8 +12,8 @@ const theme = {
 
   // content width:
   contentWidthLaptop: '850px',
-  sitePadding: "25px",
+  sitePadding: '25px'
 
-}
+};
 
 export default theme;

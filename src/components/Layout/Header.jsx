@@ -1,34 +1,34 @@
-import React from "react"
-import styled from 'styled-components'
-import Navigation from './Navigation'
+import React from 'react';
+import styled from 'styled-components';
+import Navigation from './Navigation';
 
 class MainHeader extends React.Component {
-  getHeader() {
+  getHeader () {
     if (this.props.location) {
       if (this.props.location.pathname === '/') {
         return (
-          <IndexHeadContainer>          
-            <Hero>
-              <img src={this.props.logo} style={{maxWidth:'80vw', maxHeight:'70vh' }} />
-              <p>nact ⇒ node.js + actors</p>
-              <p style={{fontStyle: 'italic'}}> your services have never been so µ</p>              
-            </Hero>
+          <IndexHeadContainer>
             <Navigation />
+            <Hero>
+              <img src={this.props.logo} style={{ maxWidth: '80vw', maxHeight: '70vh' }} />
+              <p>nact ⇒ node.js + actors</p>
+              <p style={{ fontStyle: 'italic' }}> your services have never been so µ</p>
+            </Hero>
           </IndexHeadContainer>
-        )
+        );
       } else {
         return (
           <SiteContainer>
             <Navigation isSubpage />
           </SiteContainer>
-        )
+        );
       }
     }
-    return <div></div>;
+    return <div />;
   }
 
-  render() {
-    return this.getHeader()
+  render () {
+    return this.getHeader();
   }
 }
 
@@ -36,7 +36,7 @@ const IndexHeadContainer = styled.div`
   background: ${props => props.theme.accent};  
   padding: ${props => props.theme.sitePadding};
   text-align: center;
-`
+`;
 
 const SiteContainer = styled.div`
   display: flex;
@@ -46,15 +46,13 @@ const SiteContainer = styled.div`
   color: ${props => props.theme.accent};
   height: 100%;
   padding:  25px;
-`
+`;
 
 const Hero = styled.div`
   padding: 50px 0;
   & > h1 {
     font-weight: 600;  
   }
-`
+`;
 
-export default MainHeader
-
-
+export default MainHeader;
