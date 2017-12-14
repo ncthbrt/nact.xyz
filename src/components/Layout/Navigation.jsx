@@ -37,7 +37,7 @@ class Navigation extends React.Component {
           <span className='nav-link' style={{height: '1em'}}>/</span>
           <Link className='nav-link' to='/lesson/reasonml/introduction' > <img alt='reason' style={{height: '1em'}} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link>
           <Link className='nav-link' to='/blog' > BLOG </Link>
-          <Link className='nav-link' to='/contact' > COMMUNITY </Link>
+          <Link className='nav-link' to='/community' > COMMUNITY </Link>
           <a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a>
         </section>
       </NavContainer>
