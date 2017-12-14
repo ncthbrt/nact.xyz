@@ -29,16 +29,16 @@
       "path---lesson-javascript-actor-communication-ba689c902eeccf8fa1b8.js.map"
     ],
     "path---blog": [
-      "path---blog-06f198bfd4595270e415.js",
-      "path---blog-06f198bfd4595270e415.js.map"
+      "path---blog-d5a1f8063d1a7c8479d7.js",
+      "path---blog-d5a1f8063d1a7c8479d7.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
       "path----6611940bd40871b680a6.js.map"
     ],
     "component---src-pages-community-jsx": [
-      "component---src-pages-community-jsx-9001c0f869263427d557.js",
-      "component---src-pages-community-jsx-9001c0f869263427d557.js.map"
+      "component---src-pages-community-jsx-1d31c9943c520a225713.js",
+      "component---src-pages-community-jsx-1d31c9943c520a225713.js.map"
     ],
     "path---tags-javascript": [
       "path---tags-javascript-495d92c71458123a22d8.js",
@@ -49,8 +49,8 @@
       "path---lesson-javascript-persist-22e4721b8989e69582db.js.map"
     ],
     "component---src-layouts-index-jsx": [
-      "component---src-layouts-index-jsx-020ff5948ff14210d04b.js",
-      "component---src-layouts-index-jsx-020ff5948ff14210d04b.js.map"
+      "component---src-layouts-index-jsx-c344c88e69e9cc975e00.js",
+      "component---src-layouts-index-jsx-c344c88e69e9cc975e00.js.map"
     ],
     "path---lesson-javascript-timeouts": [
       "path---lesson-javascript-timeouts-f4da35b246c58fc797fe.js",
@@ -77,8 +77,8 @@
       "path---lesson-javascript-snapshotting-d2be2ef06d1d3302c02e.js.map"
     ],
     "component---src-templates-lesson-jsx": [
-      "component---src-templates-lesson-jsx-3b3bbb37c6910485afd4.js",
-      "component---src-templates-lesson-jsx-3b3bbb37c6910485afd4.js.map"
+      "component---src-templates-lesson-jsx-0a9893fb2fd20a4266c4.js",
+      "component---src-templates-lesson-jsx-0a9893fb2fd20a4266c4.js.map"
     ],
     "path---categories-javascript": [
       "path---categories-javascript-40fd2556778d79992264.js",
@@ -101,8 +101,8 @@
       "path---lesson-reasonml-getting-started-4823b41d8fa70bcb5e7b.js.map"
     ],
     "path---index": [
-      "path---index-3b4e99b068d705820d6f.js",
-      "path---index-3b4e99b068d705820d6f.js.map"
+      "path---index-8884f0f98c11dc60623b.js",
+      "path---index-8884f0f98c11dc60623b.js.map"
     ],
     "path---community": [
       "path---community-586c7e095e534a3909ec.js",
@@ -113,8 +113,10 @@
       "path---lesson-reasonml-actor-communication-cec2995b5682c9a36117.js.map"
     ],
     "commons": [
-      "commons-1cfb5a18fc12e7c77382.js",
-      "commons-1cfb5a18fc12e7c77382.js.map"
+      "commons-40dd4cfc87ab95d8fad6.js",
+      "build-js-styles.css",
+      "commons-40dd4cfc87ab95d8fad6.js.map",
+      "build-js-styles.css.map"
     ],
     "component---src-templates-tag-jsx": [
       "component---src-templates-tag-jsx-6d724a4bbcff12c3ea7c.js",
@@ -133,12 +135,12 @@
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-853102108fdc8a3b6409.js",
-      "component---src-pages-index-jsx-853102108fdc8a3b6409.js.map"
+      "component---src-pages-index-jsx-29d3686051bd916719cb.js",
+      "component---src-pages-index-jsx-29d3686051bd916719cb.js.map"
     ],
     "component---src-templates-blog-jsx": [
-      "component---src-templates-blog-jsx-17d5bade09083b6f8bbb.js",
-      "component---src-templates-blog-jsx-17d5bade09083b6f8bbb.js.map"
+      "component---src-templates-blog-jsx-2a4bed9a9c0a56070512.js",
+      "component---src-templates-blog-jsx-2a4bed9a9c0a56070512.js.map"
     ],
     "path---tags-nact": [
       "path---tags-nact-a6d3c41b0e0c62e7ce49.js",
@@ -149,8 +151,8 @@
       "path---lesson-reasonml-timeouts-92361391f982b62ae25a.js.map"
     ],
     "app": [
-      "app-05873e0b8ad687961062.js",
-      "app-05873e0b8ad687961062.js.map"
+      "app-fb0a936f76e8245ea518.js",
+      "app-fb0a936f76e8245ea518.js.map"
     ],
     "path---categories-reasonml": [
       "path---categories-reasonml-67d91dc234ba29e838fc.js",
