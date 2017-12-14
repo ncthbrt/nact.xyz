@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "path---lesson-reasonml-persist": [
-      "path---lesson-reasonml-persist-16aa10554ea782e63e4b.js",
-      "path---lesson-reasonml-persist-16aa10554ea782e63e4b.js.map"
+      "path---lesson-reasonml-persist-6792fa184ee0f9dc47d3.js",
+      "path---lesson-reasonml-persist-6792fa184ee0f9dc47d3.js.map"
     ],
     "path---tags-reason": [
-      "path---tags-reason-bc297514332f8fa67f4c.js",
-      "path---tags-reason-bc297514332f8fa67f4c.js.map"
+      "path---tags-reason-8758c8b4bf347ce91ba4.js",
+      "path---tags-reason-8758c8b4bf347ce91ba4.js.map"
     ],
     "path---tags-other": [
       "path---tags-other-f070efcd65c53db0824b.js",
@@ -17,20 +17,44 @@
       "path---tags-programming-fb4560a04bf47d19d9c2.js.map"
     ],
     "path---lesson-reasonml-querying": [
-      "path---lesson-reasonml-querying-d4aa79c1c6193b935ab4.js",
-      "path---lesson-reasonml-querying-d4aa79c1c6193b935ab4.js.map"
+      "path---lesson-reasonml-querying-c30666c824462444858a.js",
+      "path---lesson-reasonml-querying-c30666c824462444858a.js.map"
     ],
     "path---lesson-reasonml-stateful-actors": [
-      "path---lesson-reasonml-stateful-actors-59c184edd9048eca74e2.js",
-      "path---lesson-reasonml-stateful-actors-59c184edd9048eca74e2.js.map"
+      "path---lesson-reasonml-stateful-actors-f9f16743c8dd5488e4f4.js",
+      "path---lesson-reasonml-stateful-actors-f9f16743c8dd5488e4f4.js.map"
+    ],
+    "path---lesson-javascript-stateful-actors": [
+      "path---lesson-javascript-stateful-actors-ba182ee3361e7ec7c35d.js",
+      "path---lesson-javascript-stateful-actors-ba182ee3361e7ec7c35d.js.map"
+    ],
+    "path---tags-nodejs": [
+      "path---tags-nodejs-81722fd1113b868c0f6d.js",
+      "path---tags-nodejs-81722fd1113b868c0f6d.js.map"
+    ],
+    "path---lesson-javascript-actor-communication": [
+      "path---lesson-javascript-actor-communication-f23ee6d43777d21fa9b9.js",
+      "path---lesson-javascript-actor-communication-f23ee6d43777d21fa9b9.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
       "path----6611940bd40871b680a6.js.map"
     ],
+    "path---tags-javascript": [
+      "path---tags-javascript-559e045b97f9a8266ef4.js",
+      "path---tags-javascript-559e045b97f9a8266ef4.js.map"
+    ],
+    "path---lesson-javascript-persist": [
+      "path---lesson-javascript-persist-8e0bc312e7673c596e1c.js",
+      "path---lesson-javascript-persist-8e0bc312e7673c596e1c.js.map"
+    ],
     "component---src-layouts-index-jsx": [
-      "component---src-layouts-index-jsx-56073acd1870c6a93ea1.js",
-      "component---src-layouts-index-jsx-56073acd1870c6a93ea1.js.map"
+      "component---src-layouts-index-jsx-900a85b865b923508c03.js",
+      "component---src-layouts-index-jsx-900a85b865b923508c03.js.map"
+    ],
+    "path---lesson-javascript-timeouts": [
+      "path---lesson-javascript-timeouts-921fdd3b510bc2af9e01.js",
+      "path---lesson-javascript-timeouts-921fdd3b510bc2af9e01.js.map"
     ],
     "path---categories-tech": [
       "path---categories-tech-a914573c7b29be588fec.js",
@@ -41,36 +65,56 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---lesson-reasonml-introduction": [
-      "path---lesson-reasonml-introduction-67ede22c08335693b6cd.js",
-      "path---lesson-reasonml-introduction-67ede22c08335693b6cd.js.map"
+      "path---lesson-reasonml-introduction-27e1402ac583060d410a.js",
+      "path---lesson-reasonml-introduction-27e1402ac583060d410a.js.map"
+    ],
+    "path---lesson-javascript-hierarchy": [
+      "path---lesson-javascript-hierarchy-49ddfc784b4b56afb7b6.js",
+      "path---lesson-javascript-hierarchy-49ddfc784b4b56afb7b6.js.map"
     ],
     "path---lesson-reasonml-snapshotting": [
-      "path---lesson-reasonml-snapshotting-aa441f5faa3bb29854e6.js",
-      "path---lesson-reasonml-snapshotting-aa441f5faa3bb29854e6.js.map"
+      "path---lesson-reasonml-snapshotting-837129ccc10c5e8bb5f9.js",
+      "path---lesson-reasonml-snapshotting-837129ccc10c5e8bb5f9.js.map"
+    ],
+    "path---lesson-javascript-snapshotting": [
+      "path---lesson-javascript-snapshotting-0fbb273bcfb0fd3c3da9.js",
+      "path---lesson-javascript-snapshotting-0fbb273bcfb0fd3c3da9.js.map"
     ],
     "component---src-templates-lesson-jsx": [
-      "component---src-templates-lesson-jsx-074ddd0e43cffaa615a8.js",
-      "component---src-templates-lesson-jsx-074ddd0e43cffaa615a8.js.map"
+      "component---src-templates-lesson-jsx-2e56f785fed71155efc1.js",
+      "component---src-templates-lesson-jsx-2e56f785fed71155efc1.js.map"
+    ],
+    "path---categories-javascript": [
+      "path---categories-javascript-a980ea20f8708e6dd183.js",
+      "path---categories-javascript-a980ea20f8708e6dd183.js.map"
+    ],
+    "path---lesson-javascript-querying": [
+      "path---lesson-javascript-querying-c31924f5e5b0be1521e3.js",
+      "path---lesson-javascript-querying-c31924f5e5b0be1521e3.js.map"
+    ],
+    "path---lesson-javascript-getting-started": [
+      "path---lesson-javascript-getting-started-0080b29e4920acbfec7c.js",
+      "path---lesson-javascript-getting-started-0080b29e4920acbfec7c.js.map"
     ],
     "component---src-templates-category-jsx": [
       "component---src-templates-category-jsx-3a50fee79b9519c47f96.js",
       "component---src-templates-category-jsx-3a50fee79b9519c47f96.js.map"
     ],
     "path---lesson-reasonml-getting-started": [
-      "path---lesson-reasonml-getting-started-50de95a00befd8c5d003.js",
-      "path---lesson-reasonml-getting-started-50de95a00befd8c5d003.js.map"
+      "path---lesson-reasonml-getting-started-acf15b249e62e81f07dd.js",
+      "path---lesson-reasonml-getting-started-acf15b249e62e81f07dd.js.map"
     ],
     "path---index": [
-      "path---index-a75ed7cf146533d74f18.js",
-      "path---index-a75ed7cf146533d74f18.js.map"
+      "path---index-b84cd389694ae5a79180.js",
+      "path---index-b84cd389694ae5a79180.js.map"
     ],
     "component---src-pages-about-jsx": [
-      "component---src-pages-about-jsx-29f0b7f9ab2d9070f7b7.js",
-      "component---src-pages-about-jsx-29f0b7f9ab2d9070f7b7.js.map"
+      "component---src-pages-about-jsx-9623aeead915c97e076e.js",
+      "component---src-pages-about-jsx-9623aeead915c97e076e.js.map"
     ],
     "path---lesson-reasonml-actor-communication": [
-      "path---lesson-reasonml-actor-communication-cf52a3e246bd6d52367f.js",
-      "path---lesson-reasonml-actor-communication-cf52a3e246bd6d52367f.js.map"
+      "path---lesson-reasonml-actor-communication-2f343b8ce807bcbf8c7b.js",
+      "path---lesson-reasonml-actor-communication-2f343b8ce807bcbf8c7b.js.map"
     ],
     "commons": [
       "commons-dd2942a5a5c9bcc49081.js",
@@ -85,8 +129,12 @@
       "path---post-tech-post-one-c5ce1d4b08a57ad8cf05.js.map"
     ],
     "path---tags-getting-started": [
-      "path---tags-getting-started-febdc8a153e051d8bc38.js",
-      "path---tags-getting-started-febdc8a153e051d8bc38.js.map"
+      "path---tags-getting-started-ed6486966cdd62fbe25e.js",
+      "path---tags-getting-started-ed6486966cdd62fbe25e.js.map"
+    ],
+    "path---lesson-javascript-introduction": [
+      "path---lesson-javascript-introduction-ebefbaf050d67d742ce9.js",
+      "path---lesson-javascript-introduction-ebefbaf050d67d742ce9.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-586c7e095e534a3909ec.js",
@@ -97,28 +145,32 @@
       "component---src-templates-post-jsx-0d8d9adde2927da520c2.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-438e50145351ba705ff1.js",
-      "component---src-pages-index-jsx-438e50145351ba705ff1.js.map"
+      "component---src-pages-index-jsx-c08c491ea30e8da7bcc7.js",
+      "component---src-pages-index-jsx-c08c491ea30e8da7bcc7.js.map"
     ],
     "path---tags-nact": [
-      "path---tags-nact-c9a4538518d8875d239c.js",
-      "path---tags-nact-c9a4538518d8875d239c.js.map"
+      "path---tags-nact-8c9ead5944416c69bc83.js",
+      "path---tags-nact-8c9ead5944416c69bc83.js.map"
     ],
     "path---lesson-reasonml-timeouts": [
-      "path---lesson-reasonml-timeouts-c4ab1870cfe5bfe35c6d.js",
-      "path---lesson-reasonml-timeouts-c4ab1870cfe5bfe35c6d.js.map"
+      "path---lesson-reasonml-timeouts-e306e2efae59b6f9c610.js",
+      "path---lesson-reasonml-timeouts-e306e2efae59b6f9c610.js.map"
     ],
     "app": [
-      "app-ffd780331e0c54614db6.js",
-      "app-ffd780331e0c54614db6.js.map"
+      "app-53431b46b490d274f5a1.js",
+      "app-53431b46b490d274f5a1.js.map"
     ],
     "path---categories-reasonml": [
-      "path---categories-reasonml-6b075c0a8b215fd9fae4.js",
-      "path---categories-reasonml-6b075c0a8b215fd9fae4.js.map"
+      "path---categories-reasonml-03c173502a767f54e775.js",
+      "path---categories-reasonml-03c173502a767f54e775.js.map"
+    ],
+    "path---lesson-reasonml-hierarchy": [
+      "path---lesson-reasonml-hierarchy-bc6e76baa0f457593f64.js",
+      "path---lesson-reasonml-hierarchy-bc6e76baa0f457593f64.js.map"
     ],
     "path---tags-bucklescript": [
-      "path---tags-bucklescript-522d6e68f29556b0ae94.js",
-      "path---tags-bucklescript-522d6e68f29556b0ae94.js.map"
+      "path---tags-bucklescript-2945e93c75b9205210c7.js",
+      "path---tags-bucklescript-2945e93c75b9205210c7.js.map"
     ],
     "path---tags-stuff": [
       "path---tags-stuff-077a31247ed496488147.js",
