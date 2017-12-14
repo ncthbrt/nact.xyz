@@ -1,15 +1,14 @@
-import React from "react"
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
 // This class should not be used for listing posts, but for chapter based Docs. See PostListing for that.
 // You'll also need to add your chapters to siteConfig
 
 class TableOfContents extends React.Component {
-  buildNodes() {
-    const {posts} = this.props
-    const type = this.props.contentsType    
+  buildNodes () {
+    const {posts} = this.props;
+    const type = this.props.contentsType;
     const postNodes = [];
     posts.forEach(post => {
       if (post.node.frontmatter.type === type) {
@@ -19,32 +18,32 @@ class TableOfContents extends React.Component {
           category: post.node.frontmatter.category,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter
-        }
-        postNodes.push(postNode)
+        };
+        postNodes.push(postNode);
       }
-    })
+    });
 
     const postNodeChapters = [];
     postNodes.forEach(post => {
       if (postNodeChapters[post.chapter]) {
-        postNodeChapters[post.chapter].push(post)
+        postNodeChapters[post.chapter].push(post);
       } else {
-        postNodeChapters[post.chapter] = [post]
+        postNodeChapters[post.chapter] = [post];
       }
-    })
+    });
 
     postNodeChapters.forEach(chapter => {
-      chapter.sort((a, b) => a.lessonNumber > b.lessonNumber)
-    })
-    return postNodeChapters
+      chapter.sort((a, b) => a.lessonNumber > b.lessonNumber);
+    });
+    return postNodeChapters;
   }
 
-  nodeListItems() {
-    const postNodeChapters = this.buildNodes()
-    const listItems = []
-    const chapterTitles = this.props.chapterTitles
+  nodeListItems () {
+    const postNodeChapters = this.buildNodes();
+    const listItems = [];
+    const chapterTitles = this.props.chapterTitles;
     postNodeChapters.forEach((chapter, idx) => {
-      const chapterLessons = []
+      const chapterLessons = [];
       chapter.forEach(node => {
         chapterLessons.push(
           <LessonContainer>
@@ -57,8 +56,8 @@ class TableOfContents extends React.Component {
               </li>
             </Link>
           </LessonContainer>
-        )
-      })
+        );
+      });
       listItems.push(
         <li className='chapter'>
           <h5 className='tocHeading'>
@@ -68,25 +67,24 @@ class TableOfContents extends React.Component {
             {chapterLessons}
           </ul>
         </li>
-      )
-    })
-    return listItems
+      );
+    });
+    return listItems;
   }
 
-  render() {
+  render () {
     return (
       <TableOfContentsContainer>
         <ul>
           {this.nodeListItems()}
         </ul>
       </TableOfContentsContainer>
-    )
+    );
   }
 }
 
 const TableOfContentsContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-
+  padding: ${props => props.theme.sitePadding};  
   & > ul, .chapterItems {
     list-style: none;
     padding: 0;
@@ -104,7 +102,7 @@ const TableOfContentsContainer = styled.div`
      color: ${props => props.theme.brand};
      margin-bottom: 10px;
   }
-`
+`;
 
 const LessonContainer = styled.div`
   h6, p {
@@ -122,7 +120,6 @@ const LessonContainer = styled.div`
       }
     }
   }
-`
+`;
 
-export default TableOfContents
-
+export default TableOfContents;

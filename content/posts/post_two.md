@@ -1,10 +1,10 @@
 ---
-title: "Post One"
+title: "Post Two"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-date: "12/12/2017"
+date: "14/12/2017"
 category: "tech"
 type: "post"
 tags: []    
 ---
 
-# Post One!!  
+# Post Two!!

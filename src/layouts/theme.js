@@ -3,7 +3,7 @@ const theme = {
   brand: '#FC5B5B',
   accent: 'white',
   accentDark: '#35495E',
-  lightGrey: '#F6F6F6',
+  lightGrey: '#FC5B5B1A',
   darkGrey: '#91a2a3',
   ink: 'black',
   errorRed: '#FF6666',

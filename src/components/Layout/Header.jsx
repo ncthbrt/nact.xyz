@@ -39,8 +39,7 @@ const SubTitle = styled.p`
   animation-delay: 350ms;
 `;
 
-const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.accent};  
+const IndexHeadContainer = styled.div`  
   padding: ${props => props.theme.sitePadding};
   text-align: center;
 `;

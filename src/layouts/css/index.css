@@ -1,10 +1,27 @@
 /**********
  Reset
 ***********/
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/fonts/league-spartan/leaguespartan-bold.eot');
+    src: url('/fonts/league-spartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/league-spartan/leaguespartan-bold.woff2') format('woff2'),
+         url('/fonts/league-spartan/leaguespartan-bold.woff') format('woff'),
+         url('/fonts/league-spartan/leaguespartan-bold.ttf') format('truetype'),
+         url('/fonts/league-spartan/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0;    
     padding: 0;    
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .remix-button:hover {
@@ -31,7 +48,9 @@
 .remix-button button img {
     height:1em;
 }
-
+body {
+    background: #FC5B5B0A;    
+}
 table {
     border-collapse: collapse;
 }
@@ -58,11 +77,14 @@ html {
     font-size: 10px;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Futura', 'League Spartan', sans-serif;
+}
+
 body,
-h1, h2, h3, h4, h5, h6,
-p, a,
+p, a, h6
 li, ul {
-    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    font-family: 'Avenir', 'Nunito Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
@@ -93,4 +115,9 @@ a:hover {
     border-bottom: 1px solid black;
 }
 
-
+hr {
+    border: none;
+    background: #FC5B5B;
+    height: .15em;    
+    width: 100%; 
+}

@@ -23,7 +23,7 @@ class Index extends React.Component {
           />
           <BodyContainer1>
             <BodyContents>
-              <h2>Nact</h2>
+              <h2>Why nact?</h2>
               <p>Made for modern documentation sites. Table of Contents automatically generated from markdown files. </p>
               <CtaButton to={'/lesson/reasonml/introduction'}>See Your First Post</CtaButton>
             </BodyContents>

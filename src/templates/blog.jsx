@@ -1,17 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-
-import UserInfo from '../components/UserInfo';
+import Header from '../components/Layout/Header';
 import PostTags from '../components/PostTags/PostTags';
-import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import './b16-tomorrow-dark.css';
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-`;
 
 class PostTemplate extends React.Component {
   render () {
@@ -26,15 +20,12 @@ class PostTemplate extends React.Component {
     }
     return (
       <div>
-        <BodyContainer>
-          <h2>
-            {post.title}
-          </h2>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className='post-meta'>
-            <PostTags tags={post.tags} />
-          </div>
-        </BodyContainer>
+        <h3>{post.title}</h3>
+        <p>{post.date}</p>
+        <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <div className='post-meta'>
+          <PostTags tags={post.tags} />
+        </div>
       </div>
     );
   }
@@ -50,16 +41,27 @@ export default class Blog extends React.Component {
           <title>{`Blog | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath='/blog' />
-        <BodyContainer>
+        <Header
+          siteTitle={config.siteTitle}
+          siteDescription={config.siteDescription}
+          location={this.props.location}
+          logo={config.siteLogo}
+          />
+        <BodyContents>
           <h1>
             Blog
           </h1>
-          {postNodes.map((x, i) => <PostTemplate key={i} node={x.node} />)}
-        </BodyContainer>
+          {postNodes.reduce((prev, x, i) => [...prev, prev ? <hr /> : undefined, <PostTemplate key={i} node={x.node} />], undefined)}
+        </BodyContents>
       </div>
     );
   }
 }
+
+const BodyContents = styled.div`
+margin: 0 auto;
+max-width: ${props => props.theme.contentWidthLaptop};
+`;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

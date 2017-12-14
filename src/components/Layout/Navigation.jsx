@@ -7,7 +7,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: ${props => props.isSubpage ? props.theme.brand : props.theme.accent};        
+  background: ${props => props.isSubpage ? props.theme.brand : 'inherit'};        
   margin: ${props => props.isSubpage ? 'inherit' : '0 auto'};        
   .nav-link {
     font-size: 1.6rem;

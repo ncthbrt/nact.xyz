@@ -84,7 +84,6 @@ const HeaderContainer = styled.div`
 const ToCContainer = styled.div`
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background: ${props => props.theme.lightGrey};
   overflow: scroll;
 `;
 
