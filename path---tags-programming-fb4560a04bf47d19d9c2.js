@@ -1,2 +1,0 @@
-webpackJsonp([0x130f6a9f457c8000],{"./node_modules/json-loader/index.js!./.cache/json/tags-programming.json":function(t,o){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/post-one"},excerpt:"Post One!!",timeToRead:1,frontmatter:{title:"Post One",tags:["programming","stuff","other"],cover:"https://unsplash.it/400/300/?random?BoldMage",date:"01/01/2017"}}}]}},pathContext:{tag:"programming"}}}});
-//# sourceMappingURL=path---tags-programming-fb4560a04bf47d19d9c2.js.map

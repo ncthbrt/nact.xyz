@@ -3,14 +3,13 @@
 <url> <loc>https://nact.io/offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/actor-communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/lesson/javascript/hierarchy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/persist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/javascript/hierarchy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/snapshotting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/lesson/javascript/stateful-actors</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/timeouts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/post/tech/post-one</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/javascript/stateful-actors</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/actor-communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/hierarchy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,14 +23,11 @@
 <url> <loc>https://nact.io/tags/nact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/nodejs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/stuff/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/tags/other/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/reason/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/bucklescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/categories/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/community/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
