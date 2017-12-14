@@ -25,10 +25,12 @@ class Navigation extends React.Component {
     return (
       <NavContainer isSubpage={this.props.isSubpage}>
         <section>
-          <Link className='nav-link' to='/' > HOME </Link>
+          <Link className='nav-link' to='/' ><img style={{height: '1.5em'}} alt="logo" src="/logos/logo-wide.svg" /></Link>
+        </section>
+        <section>          
           <Link className='nav-link' to='/lesson/reasonml/introduction' > DOCS </Link>
-          <Link className='nav-link' to='/contact' > CONTACT </Link>
-        </section>        
+          <Link className='nav-link' to='/contact' > COMMUNITY </Link>
+        </section>                
       </NavContainer>
     )
   }
