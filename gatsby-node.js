@@ -34,15 +34,14 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve('src/templates/post.jsx');
+    const blogPage = path.resolve('src/templates/blog.jsx');
     const lessonPage = path.resolve('src/templates/lesson.jsx');
     const tagPage = path.resolve('src/templates/tag.jsx');
     const categoryPage = path.resolve('src/templates/category.jsx');
     resolve(
       graphql(
-        `
-        {
-          allMarkdownRemark {
+        `{
+          allMarkdownRemark(filter: {frontmatter: {type: {ne: "post"}}}) {
             edges {
               node {
                 frontmatter {
@@ -56,8 +55,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
               }
             }
           }
-        }
-      `
+        }`
       ).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */
@@ -78,15 +76,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             categorySet.add(edge.node.frontmatter.category);
           }
 
-          if (edge.node.frontmatter.type === 'post') {
-            createPage({
-              path: `/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
-              component: postPage,
-              context: {
-                slug: edge.node.fields.slug
-              }
-            });
-          } else {
+          if (edge.node.frontmatter.type === 'lesson') {
             createPage({
               path: `/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
               component: lessonPage,
@@ -118,6 +108,12 @@ exports.createPages = ({graphql, boundActionCreators}) => {
               category
             }
           });
+        });
+      }).then(() => {
+        createPage({
+          path: `/blog`,
+          component: blogPage,
+          context: {}
         });
       })
     );

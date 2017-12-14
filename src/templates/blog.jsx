@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import UserInfo from '../components/UserInfo';
-import Disqus from '../components/Disqus/Disqus';
 import PostTags from '../components/PostTags/PostTags';
 import SocialLinks from '../components/SocialLinks/SocialLinks';
 import SEO from '../components/SEO/SEO';
@@ -14,10 +13,10 @@ const BodyContainer = styled.div`
   padding: ${props => props.theme.sitePadding};
 `;
 
-export default class PostTemplate extends React.Component {
+class PostTemplate extends React.Component {
   render () {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.markdownRemark;
+    const { slug } = this.props.node.fields.slug;
+    const postNode = this.props.node;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -27,21 +26,35 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
         <BodyContainer>
-          <h1>
+          <h2>
             {post.title}
-          </h1>
+          </h2>
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className='post-meta'>
             <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
           </div>
-          <UserInfo config={config} />
-          <Disqus postNode={postNode} />
+        </BodyContainer>
+      </div>
+    );
+  }
+}
+
+export default class Blog extends React.Component {
+  render () {
+    const postNodes = this.props.data.allMarkdownRemark.edges;
+
+    return (
+      <div>
+        <Helmet>
+          <title>{`Blog | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath='/blog' />
+        <BodyContainer>
+          <h1>
+            Blog
+          </h1>
+          {postNodes.map((x, i) => <PostTemplate key={i} node={x.node} />)}
         </BodyContainer>
       </div>
     );
@@ -50,21 +63,24 @@ export default class PostTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
-      fields {
-        slug
+query AllBlogPosts {
+  allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}) {
+    edges {
+      node {
+        html
+        timeToRead
+        excerpt
+        frontmatter {
+          title
+          cover
+          date
+          category
+          tags
+        }
+        fields {
+          slug
+        }
       }
     }
   }
-`;
+}`;
