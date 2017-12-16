@@ -75,8 +75,8 @@ const BodyGrid = styled.div`
 const BodyContainer = styled.div`
   grid-area: content;  
   justify-self: center;  
-  width: 100%; 
-  
+  width: 100%;   
+  max-width: ${props => props.theme.contentWidthLaptop};
   padding: ${props => props.theme.sitePadding};
   padding-bottom: 0;
   padding-top: 0;
