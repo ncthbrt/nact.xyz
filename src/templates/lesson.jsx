@@ -30,12 +30,12 @@ export default class LessonTemplate extends React.Component {
             <SiteHeader location={this.props.location} />
           </HeaderContainer>
           <BodyContainer className='content'>
-            <div>
+            <article>
               <h1>
                 {post.title}
               </h1>
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            </div>
+            </article>
           </BodyContainer>
           <ToCContainer className='nav'>
             <TableOfContents
@@ -80,6 +80,7 @@ const BodyContainer = styled.div`
   width: 100%;  
   padding: ${props => props.theme.sitePadding};
   padding-bottom: 0;
+  padding-top: 0;
   & > div {
     max-width: ${props => props.theme.contentWidthLaptop};
     margin: auto;
