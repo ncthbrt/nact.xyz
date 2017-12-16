@@ -26,17 +26,10 @@ export default class LessonTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <BodyGrid>
-          <HeaderContainer>
+          <HeaderContainer className='header'>
             <SiteHeader location={this.props.location} />
           </HeaderContainer>
-          <ToCContainer>
-            <TableOfContents
-              posts={this.props.data.allPostTitles.edges}
-              contentsType='lesson'
-              chapterTitles={config.toCChapters}
-            />
-          </ToCContainer>
-          <BodyContainer>
+          <BodyContainer className='content'>
             <div>
               <h1>
                 {post.title}
@@ -44,27 +37,49 @@ export default class LessonTemplate extends React.Component {
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </div>
           </BodyContainer>
+          <ToCContainer className='nav'>
+            <TableOfContents
+              posts={this.props.data.allPostTitles.edges}
+              contentsType='lesson'
+              chapterTitles={config.toCChapters}
+            />
+          </ToCContainer>
+
         </BodyGrid>
       </div>
     );
   }
 }
 
-const BodyGrid = styled.div`
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 75px 1fr;
-  grid-template-columns: 300px 1fr;
+const BodyGrid = styled.div`  
+  width: 100vw;
+  display: grid;  
+  grid-template-areas: 
+    "header"
+    "content"
+    "nav";    
+      
+  @media (min-width: 500px) {
+    height: 100vh;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas: 
+      "header  header"      
+      "nav content";
+    #nav {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 `;
 
 const BodyContainer = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  overflow: scroll;
+  grid-area: content;  
   justify-self: center;
-  width: 100%;
+  max-width: 90vw;
+  width: 100%;  
   padding: ${props => props.theme.sitePadding};
-  
+  padding-bottom: 0;
   & > div {
     max-width: ${props => props.theme.contentWidthLaptop};
     margin: auto;
@@ -73,18 +88,26 @@ const BodyContainer = styled.div`
   & > h1 {
     color: ${props => props.theme.accentDark};
   }
+  
+  @media (min-width: 500px) {
+    overflow: scroll;
+    padding-bottom: ${props => props.theme.sitePadding};
+  }
 `;
 
 const HeaderContainer = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
+  grid-area: header;
+  width: 100%;  
   z-index: 2;
 `;
 
 const ToCContainer = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  overflow: scroll;
+  grid-area: nav;
+  padding-top: 0
+  @media (min-width: 500px) {
+    overflow: scroll;
+    padding-top: ${props => props.theme.sitePadding};
+  }
 `;
 
 /* eslint no-undef: "off" */
