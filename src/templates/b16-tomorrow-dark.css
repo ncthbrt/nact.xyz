@@ -63,8 +63,11 @@ pre[class*="language-"] {
 }
 
 code {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', monospace;    
+    text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */    
+    font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */    
     font-variant-ligatures: contextual !important;        
+    -webkit-font-variant-ligatures: contextual !important; 
 }
 
 pre[class*="language-"]::-moz-selection,

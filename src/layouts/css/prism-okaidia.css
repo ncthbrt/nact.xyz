@@ -57,6 +57,13 @@ pre[class*="language-"] {
     color: #f8f8f2;
     background: none;
     font-family: 'Fira Code', monospace;
+    font-feature-settings: "liga", "clig";
+    -moz-font-feature-settings: "liga", "clig";
+    -ms-font-feature-settings: "liga", "clig";
+    -o-font-feature-settings: "liga", "clig";
+    -webkit-font-feature-settings: "liga", "clig";
+    font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
+    text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */    
     font-variant-ligatures: contextual !important;
     text-align: left;
     white-space: pre;
