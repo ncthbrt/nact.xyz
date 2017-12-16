@@ -74,9 +74,9 @@ const BodyGrid = styled.div`
 
 const BodyContainer = styled.div`
   grid-area: content;  
-  justify-self: center;
-  max-width: 90vw;
-  width: 100%;  
+  justify-self: center;  
+  width: 100%; 
+  
   padding: ${props => props.theme.sitePadding};
   padding-bottom: 0;
   padding-top: 0;
@@ -88,7 +88,9 @@ const BodyContainer = styled.div`
   & > h1 {
     color: ${props => props.theme.accentDark};
   }
-  
+  @media (max-width: 500px) {
+    max-width: 95vw;
+  }
   @media (min-width: 500px) {
     overflow: scroll;
     padding-bottom: ${props => props.theme.sitePadding};

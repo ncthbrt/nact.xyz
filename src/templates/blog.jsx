@@ -61,6 +61,9 @@ export default class Blog extends React.Component {
 const BodyContents = styled.div`
 margin: 0 auto;
 max-width: ${props => props.theme.contentWidthLaptop};
+@media (max-width: 500px) {
+  max-width: 95vw;
+}
 `;
 
 /* eslint no-undef: "off" */

@@ -63,6 +63,11 @@ display: inline-flex;
   display: ${(props) => props.menuOpen ? 'block' : 'none'};  
   width: 100%;
   padding-top: 12px;  
+  
+  * > div {
+    text-align: center;
+  }
+
   .language-divider {
     display: none;
   }
@@ -89,7 +94,7 @@ class Navigation extends React.Component {
         <section>
           {this.props.isSubpage
              ? <Link className='nav-link' to='/' ><img style={{height: '1.5em'}} alt='logo' src='/logos/logo-wide.svg' /></Link>
-             : undefined
+             : <Link className='nav-link' to='/' ><img style={{height: '1.5em'}} alt='logo' src='/logos/logo-wide-inverted.svg' /></Link>
           }
         </section>
         <Hamburger className={this.props.isSubpage ? ' ' : 'animated fadeIn'}>
