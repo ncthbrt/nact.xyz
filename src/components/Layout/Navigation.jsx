@@ -62,6 +62,16 @@ display: inline-flex;
 @media (max-width: 500px) {
   display: ${(props) => props.menuOpen ? 'block' : 'none'};  
   width: 100%;
+  padding-top: 12px;  
+  .language-divider {
+    display: none;
+  }
+  .language-link-js:after {
+    content: ' JAVASCRIPT DOCS';
+  }
+  .language-link-reason:after {
+    content: ' REASON DOCS';
+  }
 }
 `;
 
@@ -88,9 +98,9 @@ class Navigation extends React.Component {
           </button>
         </Hamburger>
         <NavLinks menuOpen={this.state.menuOpen} className={(this.props.isSubpage ? ' ' : 'animated fadeIn')}>
-          <div><Link className='nav-link' to='/lesson/javascript/introduction'> <img alt='javascript' style={{height: '1em'}} src={`/logos/language-logo_js${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
-          <div className='nav-link' style={{height: '1em'}}>/</div>
-          <div><Link className='nav-link' to='/lesson/reasonml/introduction' > <img alt='reason' style={{height: '1em'}} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
+          <div><Link className='nav-link language-link-js' to='/lesson/javascript/introduction'> <img alt='javascript docs' style={{height: '1em'}} src={`/logos/language-logo_js${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
+          <div className='nav-link language-divider' style={{height: '1em'}}>/</div>
+          <div><Link className='nav-link language-link-reason' to='/lesson/reasonml/introduction' > <img alt='reason docs' style={{height: '1em'}} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
           <div><Link className='nav-link' to='/blog' > BLOG </Link></div>
           <div><Link className='nav-link' to='/community' > COMMUNITY </Link></div>
           <div><a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a></div>
