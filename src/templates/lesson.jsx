@@ -44,7 +44,6 @@ export default class LessonTemplate extends React.Component {
               chapterTitles={config.toCChapters}
             />
           </ToCContainer>
-
         </BodyGrid>
       </div>
     );
