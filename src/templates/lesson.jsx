@@ -75,16 +75,14 @@ const BodyGrid = styled.div`
 const BodyContainer = styled.div`
   grid-area: content;  
   justify-self: center;  
-  width: 100%;   
-  max-width: ${props => props.theme.contentWidthLaptop};
+  width: 100%;     
   padding: ${props => props.theme.sitePadding};
   padding-bottom: 0;
   padding-top: 0;
-  & > div {
+  & > article {
     max-width: ${props => props.theme.contentWidthLaptop};
     margin: auto;
-  }
-  
+  }  
   & > h1 {
     color: ${props => props.theme.accentDark};
   }

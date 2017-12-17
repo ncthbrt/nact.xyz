@@ -63,10 +63,7 @@ display: inline-flex;
   display: ${(props) => props.menuOpen ? 'block' : 'none'};  
   width: 100%;
   padding-top: 12px;  
-  
-  * > div {
-    text-align: center;
-  }
+  text-align: left;  
 
   .language-divider {
     display: none;
