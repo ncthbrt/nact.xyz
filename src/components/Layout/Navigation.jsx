@@ -50,7 +50,7 @@ const Hamburger = styled.section`
     color:  ${props => props.theme.brand};
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: ${props => props.theme.widthLaptop}) {
     display: none;    
   }
 `;
@@ -59,7 +59,7 @@ const NavLinks = styled.section`
 animation-delay: 350ms;
 font-size: 2em;
 display: inline-flex;
-@media (max-width: 500px) {
+@media (max-width: ${props => props.theme.widthLaptop}) {
   display: ${(props) => props.menuOpen ? 'block' : 'none'};  
   width: 100%;
   padding-top: 12px;  

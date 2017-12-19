@@ -1,3 +1,4 @@
+const contentWidthLaptop = 850;
 const theme = {
   // named colors:
   brand: '#FC5B5B',
@@ -11,7 +12,8 @@ const theme = {
   codeEditGreen: '#42b983',
 
   // content width:
-  contentWidthLaptop: '850px',
+  contentWidthLaptop: `${contentWidthLaptop}px`,
+  widthLaptop: `${contentWidthLaptop / 2 * 3}px`,
   sitePadding: '25px'
 
 };

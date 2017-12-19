@@ -58,7 +58,7 @@ const BodyGrid = styled.div`
     "content"
     "nav";    
       
-  @media (min-width: 500px) {
+  @media (min-width: ${props => props.theme.widthLaptop}) {
     height: 100vh;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 75px 1fr;
@@ -86,10 +86,10 @@ const BodyContainer = styled.div`
   & > h1 {
     color: ${props => props.theme.accentDark};
   }
-  @media (max-width: 500px) {
+  @media (max-width: ${props => props.theme.widthLaptop}) {
     max-width: 95vw;
   }
-  @media (min-width: 500px) {
+  @media (min-width: ${props => props.theme.widthLaptop}) {
     overflow: scroll;
     padding-bottom: ${props => props.theme.sitePadding};
   }
@@ -104,7 +104,7 @@ const HeaderContainer = styled.div`
 const ToCContainer = styled.div`
   grid-area: nav;
   padding-top: 0
-  @media (min-width: 500px) {
+  @media (min-width: ${props => props.theme.widthLaptop}) {
     overflow: scroll;
     padding-top: ${props => props.theme.sitePadding};
   }

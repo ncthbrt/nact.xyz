@@ -20,7 +20,7 @@ class PostTemplate extends React.Component {
     }
     return (
       <div>
-        <h3>{post.title}</h3>
+        <h3 style={{paddingBottom: 0}}>{post.title}</h3>
         <p>{post.date}</p>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <div className='post-meta'>
@@ -34,7 +34,8 @@ class PostTemplate extends React.Component {
 export default class Blog extends React.Component {
   render () {
     const postNodes = this.props.data.allMarkdownRemark.edges;
-
+    const toTime = x => new Date(x.node.frontmatter.date + 'T00:00:00Z').getTime();
+    const dateSort = (a, b) => toTime(b) - toTime(a);
     return (
       <div>
         <Helmet>
@@ -51,7 +52,7 @@ export default class Blog extends React.Component {
           <h1>
             Blog
           </h1>
-          {postNodes.reduce((prev, x, i) => [...prev, prev ? <hr /> : undefined, <PostTemplate key={i} node={x.node} />], undefined)}
+          {postNodes.sort(dateSort).reduce((prev, x, i) => [...prev, prev ? <hr /> : undefined, <PostTemplate key={i} node={x.node} />], undefined)}
         </BodyContents>
       </div>
     );
@@ -61,7 +62,8 @@ export default class Blog extends React.Component {
 const BodyContents = styled.div`
 margin: 0 auto;
 max-width: ${props => props.theme.contentWidthLaptop};
-@media (max-width: 500px) {
+padding: ${props => props.theme.sitePadding};
+@media (max-width: ${props => props.theme.widthLaptop}) {
   max-width: 95vw;
 }
 `;
@@ -77,7 +79,7 @@ query AllBlogPosts {
         excerpt
         frontmatter {
           title
-          cover
+          cover          
           date
           category
           tags

@@ -12,7 +12,6 @@ module.exports = {
       title: config.siteTitle,
       description: config.siteDescription,
       image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
-      author: config.userName,
       copyright: config.copyright
     }
   },
@@ -100,7 +99,7 @@ module.exports = {
         setup (ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = 'GatsbyJS Material Starter';
+          ret.generator = 'Nact';
           return ret;
         },
         query: `
@@ -112,8 +111,7 @@ module.exports = {
                 feed_url
                 title
                 description
-                image_url
-                author
+                image_url                
                 copyright
               }
             }
@@ -129,7 +127,6 @@ module.exports = {
                 date: edge.node.frontmatter.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
-                author: rssMetadata.author,
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [{ 'content:encoded': edge.node.html }]
