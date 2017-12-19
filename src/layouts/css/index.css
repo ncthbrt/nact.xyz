@@ -141,6 +141,20 @@ li, li > *, dt, dd {
     margin: 10px 0;
 }
 
+a {
+    color: rgb(36, 24, 117);
+    text-decoration: none;    
+}
+a:visited {
+    color: #FC5B5B;
+}
+a:hover:visited { 
+    border-bottom: 2px dotted #FC5B5B;
+}
+
+a:hover {
+    border-bottom: 2px dotted rgb(36, 24, 117);    
+}
 
 h1 {font-size: 3.4rem;}
 h2 {font-size: 3rem;}
@@ -153,17 +167,16 @@ p, a, li, dt, dd, tr, th {
     font-size: 1.8rem;
 }
 
-a {
-    color: #2973b7;
-    text-decoration: none;
-}
-a:hover {
-    border-bottom: 1px solid black;
-}
 
 hr {
     border: none;
     background: #FC5B5B;
     height: .15em;    
     width: 100%; 
+}
+
+ul {
+   list-style-type: '⇒ ';
+   list-style-image: none;
+   list-style-position: inside;   
 }

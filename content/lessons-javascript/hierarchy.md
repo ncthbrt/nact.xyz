@@ -18,9 +18,9 @@ tags:
   </button>
 </a>
 
-The application we made in the [querying](#querying) section isn't very useful. For one it only supports a single user's contacts, and secondly it forgets all the user's contacts whenever the system restarts. In this section we'll solve the multi-user problem by exploiting an important feature of any blue-blooded actor system: the hierachy.
+The application we made in the [querying](/lesson/javascript/querying) section isn't very useful. For one it only supports a single user's contacts, and secondly it forgets all the user's contacts whenever the system restarts. In this section we'll solve the multi-user problem by exploiting an important feature of any blue-blooded actor system: the hierarchy.
 
-Actors are arranged hierarchially, they can create child actors of their own, and accordingly every actor has a parent. The lifecycle of an actor is tied to its parent; if an actor stops, then it's children do too.
+Actors are arranged hierarchically, they can create child actors of their own, and accordingly every actor has a parent. The lifecycle of an actor is tied to its parent; if an actor stops, then it's children do too.
 
 Up till now we've been creating actors which are children of the actor system (which is a pseudo actor). However in a real system, this would be considered an anti pattern, for much the same reasons as placing all your code in a single file is an anti-pattern. By exploiting the actor hierarchy, you can enforce a separation of concerns and encapsulate system functionality, while providing a coherent means of reasoning with failure and system shutdown. 
 
@@ -28,11 +28,11 @@ Let us imagine that the single user contacts service was simple a part of some l
 
 <img alt="Example of an Actor System Hierarchy" src="https://raw.githubusercontent.com/ncthbrt/nact/master/assets/hierarchy-diagram.svg?sanitize=true"/>
 
-In the diagram, the email service is responsible for managing the template engine and email delivery, while the contacts service has choosen to model each user's contacts as an actor. (This is a very feasible approach in production provided you shutdown actors after a period of inactivity)
+In the diagram, the email service is responsible for managing the template engine and email delivery, while the contacts service has chosen to model each user's contacts as an actor. (This is a very feasible approach in production provided you shutdown actors after a period of inactivity)
 
 Let us focus on the contacts service to see how we can make effective of use of the hierarchy. To support multiple users, we need do three things: 
 
-- Modify our original contacts service to so that we can parameterise its parent and name
+- Modify our original contacts service to so that we can parameterize its parent and name
 - Create a parent to route requests to the correct child
 - Add a user id to the path of each API endpoint and add a `userId` into each message.
 

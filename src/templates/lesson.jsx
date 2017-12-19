@@ -107,7 +107,7 @@ const ToCContainer = styled.div`
   @media (min-width: ${props => props.theme.widthLaptop}) {
     overflow: scroll;
     padding-top: ${props => props.theme.sitePadding};
-  }
+  }  
 `;
 
 /* eslint no-undef: "off" */

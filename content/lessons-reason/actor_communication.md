@@ -34,7 +34,7 @@ let ping: actorRef(msgType) =
     system,
     (Msg(sender, msg), ctx) => {
       print_endline(msg);
-      sender <-< Msg(ctx.self, ctx.name) |> Js.Promise.resolve
+      dispatch(sender, Msg(ctx.self, ctx.name)) |> Js.Promise.resolve
     }
   );
 
@@ -44,6 +44,7 @@ let pong: actorRef(msgType) =
     system,
     (Msg(sender, msg), ctx) => {
       print_endline(msg);
+      /* Here we're using the <-< operator as a shorthand for the dispatch method */
       sender <-< Msg(ctx.self, ctx.name) |> Js.Promise.resolve
     }
   );
