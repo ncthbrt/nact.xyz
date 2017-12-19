@@ -9,7 +9,12 @@ import MainHeader from '../components/Layout/Header';
 import About from '../components/About/About';
 
 const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
+margin: 0 auto;
+max-width: ${props => props.theme.contentWidthLaptop};
+padding: ${props => props.theme.sitePadding};
+@media (max-width: ${props => props.theme.widthLaptop}) {
+  max-width: 95vw;
+}
 `;
 
 class AboutPage extends React.Component {
@@ -25,7 +30,10 @@ class AboutPage extends React.Component {
             logo={config.siteLogo}
           />
           <BodyContainer>
-            <About />
+            <h1>Community</h1>
+            <p>Nact is developed in the open. Development activities are hosted on <a href='https://github.com/ncthbrt/nact'>github</a>.
+            Project management uses <a href='https://waffle.io/ncthbrt/nact'>waffle.io.</a> If you have any questions, or just want to say “Hi!”, please visit the discord below: </p>
+            <iframe src='https://discordapp.com/widget?id=392625718682714112&theme=light' width='350' height='500' allowTransparency='true' frameBorder='0' />
           </BodyContainer>
         </main>
       </div>

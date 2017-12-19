@@ -21,7 +21,7 @@ Other goals for 2018 are:
 - A library which implements common patterns (such as at-least once delivery, scheduled jobs, the repository pattern, etc.) to reduce boilerplate code
 - Eliminating the rxjs dependency.
 
-If you're interested in nact, or even would like to contribute to the framework, please reach out. I can be found on the nact discord or alternatively you can email me at <a href='mailto:nick@cuthbert.co.za'>nick@cuthbert.co.za</a>.
+If you're interested in nact, or even would like to contribute to the framework, please reach out. I can be found on the [nact discord](https://discord.gg/uxhFdDS) or alternatively you can email me at <a href='mailto:nick@cuthbert.co.za'>nick@cuthbert.co.za</a>.
 
 Wishing you a happy holiday,<br/>
 Nick
