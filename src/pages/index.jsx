@@ -27,7 +27,7 @@ class Index extends React.Component {
             <BodyContents>
               <h2>Nact is redux but for the server.</h2>
               <p>Servers today are very different from those even 10 years ago. So why are we still programming like it's the 90s?</p>
-              <p>Inspired by the approaches taken by Akka and Erlang, nact is an Apache licensed Node.js framework which enables you to take control of your state to:</p>
+              <p>Inspired by the approaches taken by Akka and Erlang, nact is an open source Node.js framework which enables you to take control of your state to:</p>
               <BenefitsList>
                 <li>more effectively use memory</li>
                 <li>improve application resiliance</li>
