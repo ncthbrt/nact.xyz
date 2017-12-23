@@ -35,3 +35,4 @@ let statefulGreeter =
     []
   );
 ```
+Note the addition of the extra final parameter. This parameter (in this case `[]`) represents the actor's initial state.
