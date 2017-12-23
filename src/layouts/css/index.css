@@ -168,6 +168,23 @@ p, a, li, dt, dd, tr, th {
 }
 
 
+table, th, td { 
+    border: none;
+}
+
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+tr:last-child{ 
+  border-bottom: none;
+}
+
 hr {
     border: none;
     background: #FC5B5B;

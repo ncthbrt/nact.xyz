@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class About extends Component {
-  render() {
+  render () {
     return (
-      <div className="about">
+      <div className='about'>
         <h1>
           Edit About component or pages/about.jsx to include your information.
         </h1>

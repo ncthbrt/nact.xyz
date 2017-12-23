@@ -20,7 +20,7 @@ Up till now we've been creating actors which are children of the actor system (w
 
 Let us imagine that the single user contacts service was simple a part of some larger system; an email campaign management API for example.  A potentially valid system could perhaps be represented by the diagram below. 
 
-<img alt="Example of an Actor System Hierarchy" src="https://raw.githubusercontent.com/ncthbrt/nact/master/assets/hierarchy-diagram.svg?sanitize=true"/>
+![Image](/img/hierarchy-diagram.svg)
 
 In the diagram, the email service is responsible for managing the template engine and email delivery, while the contacts service has chosen to model each user's contacts as an actor. (This is a very feasible approach in production provided you shutdown actors after a period of inactivity)
 
