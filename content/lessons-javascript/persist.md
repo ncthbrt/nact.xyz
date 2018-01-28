@@ -12,11 +12,11 @@ tags:
     - javascript
     - nodejs
 ---
-<a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-3" target="_blank">
+<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-3" target="_blank">
   <button>
     <img src="/img/code-fork-symbol.svg"/> REMIX
   </button>
-</a>
+</a> -->
 
 The contacts service we've been working on *still* isn't very useful. While we've extended the service to support multiple users, it has the unfortunate limitation that it loses the contacts each time the machine restarts. To remedy this, nact extends stateful actors by adding a new method: `persist` 
 

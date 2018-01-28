@@ -12,11 +12,11 @@ tags:
     - javascript
     - nodejs
 ---
-<a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-1" target="_blank">
+<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-1" target="_blank">
   <button>
     <img src="/img/code-fork-symbol.svg"/> REMIX
   </button>
-</a>
+</a> -->
 
 Actor systems don't live in a vacuum, they need to be available to the outside world. Commonly actor systems are fronted by REST APIs or RPC frameworks. REST and RPC style access patterns are blocking: a request comes in, it is processed, and finally returned to the sender using the original connection. To help bridge nact's non blocking nature, references to actors have a `query` function. Query returns a promise.
 

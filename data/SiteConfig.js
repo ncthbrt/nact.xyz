@@ -10,5 +10,5 @@ module.exports = {
   themeColor: '#FC5B5B', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffe8e8', // Used for setting manifest background color.
   // TODO: Move this literally anywhere better.
-  toCChapters: [undefined, 'Introduction', 'Core Concepts', 'Persistence'] // Used to generate the Table Of Contents. Index 0 should be blank.
+  toCChapters: [undefined, 'Introduction', 'Core Concepts', 'Persistence', 'Production'] // Used to generate the Table Of Contents. Index 0 should be blank.
 };

@@ -12,11 +12,11 @@ tags:
     - javascript
     - nodejs
 ---
-<a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-stateless-greeter" target="_blank">
+<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-stateless-greeter" target="_blank">
   <button>
     <img src="/img/code-fork-symbol.svg"/> REMIX
   </button>
-</a>
+</a> -->
 
 > Tip: The remix buttons like the one above, allow you to try out the samples in this guide and make changes to them. 
 > Playing around with the code is probably the best way to get to grips with the framework. 

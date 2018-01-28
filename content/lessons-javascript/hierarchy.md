@@ -12,11 +12,11 @@ tags:
     - javascript
     - nodejs
 ---
-<a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-2" target="_blank">
+<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-2" target="_blank">
   <button>
     <img src="/img/code-fork-symbol.svg"/> REMIX
   </button>
-</a>
+</a> -->
 
 The application we made in the [querying](/lesson/javascript/querying) section isn't very useful. For one it only supports a single user's contacts, and secondly it forgets all the user's contacts whenever the system restarts. In this section we'll solve the multi-user problem by exploiting an important feature of any blue-blooded actor system: the hierarchy.
 

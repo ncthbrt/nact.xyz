@@ -12,11 +12,11 @@ tags:
     - javascript
     - nodejs
 ---
-<a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-ping-pong" target="_blank">
+<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-ping-pong" target="_blank">
   <button>
     <img src="/img/code-fork-symbol.svg"/> REMIX
   </button>
-</a>
+</a> -->
 
 An actor alone is a somewhat useless construct; actors need to work together. Actors can send messages to one another by using the `dispatch` method. 
 
