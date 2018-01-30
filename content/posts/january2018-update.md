@@ -36,7 +36,7 @@ actorRef <-< "Hello Cluster!";
 ```javascript
 const system = start({seeds: ["https://system-1", "https://system-2", "https://system-3"]});
 
-const cluster = spawnCluster(~key="abc", system, roundRobin);
+const cluster = spawnCluster("abc", system, roundRobin);
 
 let member = spawnStateless(system, (msg, ctx) => console.log(msg));
 
