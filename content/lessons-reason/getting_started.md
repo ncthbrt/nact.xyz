@@ -72,4 +72,3 @@ greeter <-< { name: "Erlich Bachman" };
 
 To complete this example, we need to shutdown our system. We can do this by calling `stop(system)`
 The `stop` function also can be used to terminate actors.
-
