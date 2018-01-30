@@ -4,7 +4,7 @@ lesson: 2
 chapter: 4
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "28/01/2018"
-category: "future-reasonml"
+category: "reasonml"
 type: "lesson"
 tags:
     - getting-started
@@ -30,4 +30,69 @@ Nact uses JSON for persistence and message passing. This means that in the Reaso
 The `spawnPersistent` function includes a number of optional arguments, namely `~encoder`, `~stateEncoder`, `~decoder` and `~stateDecoder`. These functions decode `Js.Json.t` values into Reason types and encode Reason types into types of `Js.Json.t`. The decoders are well suited to performing schema evolution, while the encoders are useful for adding version information and creating a more stable persistent representation. 
 
 ## Cracking the Code
-The `DaVinci_Decode` example below demonstrates how to [ROT<sub>13</sub>](https://en.wikipedia.org/wiki/ROT13).
+The `DaVinci_Decode` example below demonstrates how to deal with an enthusiastic but naïve coworker who a) thought that [ROT<sub>13</sub>](https://en.wikipedia.org/wiki/ROT13) was a good encryption scheme and b) applied it **everywhere**. 
+
+In the example, version zero of the message protocol is ROT13 encoded and needs to be unscrambled before 
+it is processed by the actor. Version one is encoded in plain text.
+
+```reason
+/* Rot13 code */
+let a = Char.code('a');
+
+let toPositionInAlphabet = (c) => Char.code(c) - a;
+
+let fromPositionInAlphabet = (c) => Char.unsafe_chr(c + a);
+
+let rot13 = String.map((c) => (toPositionInAlphabet(c) + 13) mod 26 |> fromPositionInAlphabet);
+
+type msg = {. "version": int, "text": string};
+
+
+/* Encoders and Decoders */
+let jsonDecoder = (json) =>
+  Json.Decode.({"version": json |> field("version", int), "text": json |> field("text", string)});
+
+let decoder = (json) => {
+  let msg = json |> jsonDecoder;
+  if (msg##version == 0) {
+    {"version": msg##version, "text": rot13(msg##text)}
+  } else {
+    {"version": msg##version, "text": msg##text}
+  }
+};
+
+let encoder = (msg) =>
+  Json.Encode.(object_([("version", msg##version |> int), ("text", msg##text |> string)]));
+
+open Nact;
+
+/* Specify a concrete persistence engine here */
+let system = start(~persistenceEngine, ());
+
+let actor =
+  spawnPersistent(
+    ~key="da-vinci-code",    
+    /* Decoder and encoder functions are specified here */
+    ~decoder,    
+    ~encoder,
+    system,
+    (state, msg, ctx) => {
+      Js.log(msg##text);
+      let nextState = () => Js.Promise.resolve([msg, ...state]);
+      if (! ctx.recovering) {
+        ctx.persist(msg) |> Js.Promise.then_(nextState)
+      } else {
+        nextState()
+      }
+    },
+    []
+  );
+
+open Nact.Operators;
+
+actor <-< {"version": 0, "text": "uryybjbeyq"};
+
+actor <-< {"version": 1, "text": "the time has come"};
+
+actor <-< {"version": 0, "text": "sbewblynhtugrenaqcyraglbssha"};
+```
