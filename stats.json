@@ -45,8 +45,8 @@
       "path---lesson-javascript-actor-communication-86613c25808495e0537f.js.map"
     ],
     "path---blog": [
-      "path---blog-119ad192df1bc1452365.js",
-      "path---blog-119ad192df1bc1452365.js.map"
+      "path---blog-724e7576e15d6583c839.js",
+      "path---blog-724e7576e15d6583c839.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
@@ -75,10 +75,6 @@
     "path---lesson-javascript-timeouts": [
       "path---lesson-javascript-timeouts-9b91fddcd95024ae290c.js",
       "path---lesson-javascript-timeouts-9b91fddcd95024ae290c.js.map"
-    ],
-    "path---categories-tech": [
-      "path---categories-tech-3ced77c8058a91c524a9.js",
-      "path---categories-tech-3ced77c8058a91c524a9.js.map"
     ],
     "path---lesson-reasonml-adapters": [
       "path---lesson-reasonml-adapters-6e31400bbfc60547ba75.js",
@@ -129,8 +125,8 @@
       "path---lesson-reasonml-getting-started-b59f1cc8e24492aa7f3d.js.map"
     ],
     "path---index": [
-      "path---index-c09d05ae58549b81f522.js",
-      "path---index-c09d05ae58549b81f522.js.map"
+      "path---index-df1c914a6840f8b3f2d6.js",
+      "path---index-df1c914a6840f8b3f2d6.js.map"
     ],
     "path---community": [
       "path---community-586c7e095e534a3909ec.js",
@@ -179,9 +175,9 @@
       "path---lesson-reasonml-timeouts-26bbf121934788c59bab.js.map"
     ],
     "app": [
-      "app-124aff4971a8a0089e18.js",
+      "app-8f0ea0d206c3947a56f2.js",
       "build-js-styles.css",
-      "app-124aff4971a8a0089e18.js.map",
+      "app-8f0ea0d206c3947a56f2.js.map",
       "build-js-styles.css.map"
     ],
     "path---categories-reasonml": [
