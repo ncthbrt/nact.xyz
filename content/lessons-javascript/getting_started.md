@@ -59,6 +59,7 @@ dispatch(greeter, { name: 'Erlich Bachman' });
 This should print `Hello Erlich Bachman` to the console. 
 
 To complete this example, we need to shutdown our system. We can do this by calling `stop(system)`
+The `stop` function also can be used to terminate an actor.
 
 > Note: Stateless actors can service multiple requests at the same time. Statelessness means that such actors do not have to cater for concurrency issues.
 

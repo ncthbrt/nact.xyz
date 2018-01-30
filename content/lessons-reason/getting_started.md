@@ -13,7 +13,7 @@ tags:
     - bucklescript
 language: reasonml
 ---
-Reason Nact has only been tested to work on Node 8 and above. You can install nact in your project by invoking the following:
+Reason Nact has only been tested to work on Node 8 and above. You can install Nact in your project by invoking the following:
 
 ```bash
 npm install --save reason-nact
@@ -44,9 +44,9 @@ let greeter =
 dispatch(greeter, {name: "Erlich Bachman"});
 ```
 
-The first unamed argument to `spawnStateless` is the parent, which is in this case the actor system. The [hierarchy](#hierarchy) section will go into more detail about this.
+The first unnamed argument to `spawnStateless` is the parent, which is in this case the actor system. The [hierarchy](#hierarchy) section will go into more detail about this.
 
-The second unamed argument to `spawnStateless` is a function which is invoked when a message is received.
+The second unnamed argument to `spawnStateless` is a function which is invoked when a message is received.
 
 The name argument to `spawnStateless` is optional, and if omitted, the actor is automatically assigned a name by the system.
 
@@ -69,4 +69,7 @@ open Nact.Operators;
 greeter <-< { name: "Erlich Bachman" };
 { name: "Erlich Bachman" } >-> greeter;
 ```
+
+To complete this example, we need to shutdown our system. We can do this by calling `stop(system)`
+The `stop` function also can be used to terminate actors.
 
