@@ -45,8 +45,8 @@
       "path---lesson-javascript-actor-communication-86613c25808495e0537f.js.map"
     ],
     "path---blog": [
-      "path---blog-724e7576e15d6583c839.js",
-      "path---blog-724e7576e15d6583c839.js.map"
+      "path---blog-0553eeb74d39a7dcc317.js",
+      "path---blog-0553eeb74d39a7dcc317.js.map"
     ],
     "path---": [
       "path----6611940bd40871b680a6.js",
@@ -175,9 +175,9 @@
       "path---lesson-reasonml-timeouts-26bbf121934788c59bab.js.map"
     ],
     "app": [
-      "app-8f0ea0d206c3947a56f2.js",
+      "app-9f3c41390891ab4009b3.js",
       "build-js-styles.css",
-      "app-8f0ea0d206c3947a56f2.js.map",
+      "app-9f3c41390891ab4009b3.js.map",
       "build-js-styles.css.map"
     ],
     "path---categories-reasonml": [
