@@ -21,6 +21,10 @@
 <url> <loc>https://nact.io/lesson/javascript/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/timeouts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/supervision</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/reasonml/logging-and-monitoring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/javascript/logging-and-monitoring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/reasonml/adapters</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/lesson/future-reasonml/decoders-and-encoders</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/nact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/reason/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -30,6 +34,8 @@
 <url> <loc>https://nact.io/tags/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/categories/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/categories/future-reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/community/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

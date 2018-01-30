@@ -1,2 +1,0 @@
-webpackJsonp([44848747674137],{399:function(t,e){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/supervision"},excerpt:"Actor systems are often designed around the  let it crash  philosophy.\nThis thesis is motivated by a desire to reduce the amount of...",timeToRead:3,frontmatter:{title:"Supervision",tags:["getting-started","nact","reasonml","nodejs"],cover:"https://unsplash.it/400/300/?random?BoldMage",date:"11/12/2017"}}}]}},pathContext:{tag:"reasonml"}}}});
-//# sourceMappingURL=path---tags-reasonml-54aacc817e8d6bff5ab8.js.map
