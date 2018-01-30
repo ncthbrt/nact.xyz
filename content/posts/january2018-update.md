@@ -23,11 +23,11 @@ This is the ReasonML version:
 ```reason
 let system = start(~seeds=["https://system-1","https://system-2"]);
 
-let (actorRef:actorRef(string), cluster: clusterRef(string)) = spawnCluster(~key="abc", system, RoundRobin);
+let (actorRef, cluster) = spawnCluster(~key="abc", system, RoundRobin);
 
 let member = spawnStateless(system, (msg, ctx) => resolve(Js.log(msg)));
 
-cluster +@ actor; 
+cluster +@ member; 
 actorRef <-< "Hello Cluster!";
 ```
 
@@ -40,7 +40,7 @@ const cluster = spawnCluster(~key="abc", system, roundRobin);
 
 let member = spawnStateless(system, (msg, ctx) => console.log(msg));
 
-join(cluster, actor); 
+join(cluster, member); 
 dispatch(cluster, "Hello Cluster!");
 ```
 
