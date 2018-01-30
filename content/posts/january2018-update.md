@@ -51,4 +51,4 @@ as different routing strategies have different consistency requirements.
 The `clusterRef` supports two additional operations: `join` and `leave` or the `+@` and `-@` operators in Reason respectively. Messages can be dispatched to the cluster as per usual. In the Reason version, the `clusterRef` and 
 `actorRef` are separate so as to simplify typing.
 
-This clustering design feels ergonomic, fairly simple for the end user and flexible. If you spot a fatal flaw, please message me on [discord](./community); I like ideas that have a hope of actually working.
+This clustering design feels ergonomic, fairly simple for the end user and flexible. If you spot a fatal flaw, please message me on [discord](/community); I like ideas that have a hope of actually working.
