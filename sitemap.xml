@@ -35,6 +35,6 @@
 <url> <loc>https://nact.io/categories/reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/categories/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/community/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
