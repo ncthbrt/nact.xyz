@@ -30,7 +30,7 @@ Nact has only been tested to work on Node 8 and above. You can install nact in y
 Once installed, you need to import the start function, which starts and then returns the actor system.
 
 ```js
-const { start, dispatch, stop } = require('nact');
+const { start, dispatch, stop, spawnStateless } = require('nact');
 const system = start();
 ```
 
