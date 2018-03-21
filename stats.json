@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---lesson-reasonml-persist": [
-      "path---lesson-reasonml-persist-837f41585db9a3a15b66.js",
-      "path---lesson-reasonml-persist-837f41585db9a3a15b66.js.map"
+      "path---lesson-reasonml-persist-1bb93224fea3c6127071.js",
+      "path---lesson-reasonml-persist-1bb93224fea3c6127071.js.map"
     ],
     "path---tags-reason": [
       "path---tags-reason-134a4444946437f2979b.js",
@@ -137,9 +137,9 @@
       "path---lesson-reasonml-actor-communication-47fb84f94d6f4b5a8532.js.map"
     ],
     "commons": [
-      "commons-2bf137e646decfab3743.js",
+      "commons-38f09ce994f0a9ecd48c.js",
       "build-js-styles.css",
-      "commons-2bf137e646decfab3743.js.map",
+      "commons-38f09ce994f0a9ecd48c.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-tag-jsx": [
