@@ -31,8 +31,8 @@ let createContactsService = (parent, userId) =>
     ~key="contacts" ++ userId,
     ~name=userId,
     parent,
-    (state, (sender, msg), {persist}) =>
-      persist((sender, msg))
+    (state, (sender, msg), {persist, recovering}) =>
+      (recovering ? Js.Promise.resolve((sender, msg)) : persist((sender, msg)))
       |> Js.Promise.then_ (
         () =>
           (

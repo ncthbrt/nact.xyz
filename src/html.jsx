@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint import/no-unresolved:"off" */
 /* eslint import/extensions:"off" */
 /* eslint global-require:"off" */
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export default class HTML extends React.Component {
-  render () {
+  render() {
     let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
@@ -37,6 +38,8 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link rel='shortcut icon' href={favicon} />
+          <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css' />
+          <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js' />
           {css}
         </head>
         <body>

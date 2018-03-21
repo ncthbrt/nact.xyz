@@ -60,6 +60,11 @@
     font-style: normal;
 }
 
+
+.algolia-autocomplete {
+    z-index: 10000;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;    
