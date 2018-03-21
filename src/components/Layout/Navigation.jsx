@@ -155,10 +155,10 @@ class Navigation extends React.Component {
         </Hamburger>
 
         <NavLinks menuOpen={this.state.menuOpen} className={(this.props.isSubpage ? ' ' : 'animated fadeIn')}>
-          <Search>
+          {this.props.isSubpage && <Search>
             <img src='/img/search.svg' className='icon' />
             <input placeholder='search docs' type='search' ref={() => this.mountDocsearch()} className='search-box' id='search-box' />
-          </Search>
+          </Search>}
           <div><Link className='nav-link language-link-js' to='/lesson/javascript/introduction'> <img alt='javascript docs' style={{ height: '1em' }} src={`/logos/language-logo_js${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
           <div className='nav-link language-divider' style={{ height: '1em' }}>/</div>
           <div><Link className='nav-link language-link-reason' to='/lesson/reasonml/introduction' > <img alt='reason docs' style={{ height: '1em' }} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
