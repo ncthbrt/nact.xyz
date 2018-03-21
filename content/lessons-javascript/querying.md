@@ -171,10 +171,31 @@ app.get('/api/contacts/:contact_id', async (req,res) => {
   }
 });
 ```
-Now this is a bit of boilerplate for each endpoint, but could be refactored so as to extract the error handling into a separate function (called `performQuery`, for the full definition, click on the glitch button). This would allow us to define the endpoints as follows:
+Now this is a bit of boilerplate for each endpoint, but could be refactored so as to extract the error handling into a separate function named `performQuery`:
 
 ```js
+const performQuery = async (msg, res) => {
+  try {
+    const result = await query(contactsService, msg, 500); // Set a 250ms timeout
+    switch(result.type) {
+      case SUCCESS: res.json(result.payload); break;
+      case NOT_FOUND: res.sendStatus(404); break;
+      default:
+        // This shouldn't ever happen, but means that something is really wrong in the application
+        console.error(JSON.stringify(result));
+        res.sendStatus(500);
+        break;
+    }
+  } catch (e) {
+    // 504 is the gateway timeout response code. Nact only throws on queries to a valid actor reference if the timeout 
+    // expires.
+    res.sendStatus(504);
+  }
+};
+```
+This would allow us to define the endpoints as follows:
 
+```js
 app.get('/api/contacts', (req,res) => performQuery({ type: GET_CONTACTS }, res));
 
 app.get('/api/contacts/:contact_id', (req,res) => 
