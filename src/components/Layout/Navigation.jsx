@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
@@ -116,17 +117,19 @@ class Navigation extends React.Component {
     this.state = { menuOpen: false, docSearchMounted: false };
   }
   mountDocsearch() {
+    const searchFilter = window.location.pathname.indexOf('javascript') >= 0
+      ? 'version:javascript'
+      : (window.location.pathname.indexOf('reasonml') >= 0 ? 'version:reasonml' : '');
     if (!this.state.docSearchMounted) {
       docsearch({
         apiKey: '1d6174bf6b7151ce0bd244b270732d24',
         indexName: 'nact',
         inputSelector: '#search-box',
-        debug: true,       // Set debug to true if you want to inspect the dropdown,
-        autocompleteOptions: {
-          // See https://github.com/algolia/autocomplete.js#options
-          // For full list of options
+        debug: false,       // Set debug to true if you want to inspect the dropdown,
+        algoliaOptions: {
+          filters: searchFilter,
+          attributesToRetrieve: ['*']
         }
-
       });
       this.setState({ docSearchMounted: true });
     }
@@ -152,7 +155,7 @@ class Navigation extends React.Component {
         </Hamburger>
 
         <NavLinks menuOpen={this.state.menuOpen} className={(this.props.isSubpage ? ' ' : 'animated fadeIn')}>
-          <Search className='animated fadeIn'>
+          <Search>
             <img src='/img/search.svg' className='icon' />
             <input placeholder='search docs' type='search' ref={() => this.mountDocsearch()} className='search-box' id='search-box' />
           </Search>
