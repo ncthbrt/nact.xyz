@@ -152,7 +152,7 @@ class Navigation extends React.Component {
         </Hamburger>
 
         <NavLinks menuOpen={this.state.menuOpen} className={(this.props.isSubpage ? ' ' : 'animated fadeIn')}>
-          <Search className='animated flipInX'>
+          <Search className='animated fadeIn'>
             <img src='/img/search.svg' className='icon' />
             <input placeholder='search docs' type='search' ref={() => this.mountDocsearch()} className='search-box' id='search-box' />
           </Search>
