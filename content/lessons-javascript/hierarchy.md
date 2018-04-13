@@ -32,7 +32,7 @@ In the diagram, the email service is responsible for managing the template engin
 
 Let us focus on the contacts service to see how we can make effective of use of the hierarchy. To support multiple users, we need do three things: 
 
-- Modify our original contacts service to so that we can parameterize its parent and name
+- Modify our original contacts service so that we can parameterize its parent and name
 - Create a parent to route requests to the correct child
 - Add a user id to the path of each API endpoint and add a `userId` into each message.
 
