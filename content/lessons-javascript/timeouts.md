@@ -12,7 +12,6 @@ tags:
     - javascript
     - nodejs
 ---
-
 While not strictly a part of the persistent actor, timeouts are frequently used with snapshotting. Actors take up memory, which is still a limited resource. If an actor has not processed messages in a while, it makes sense to shut it down until it is again needed; this frees up memory. Adding a timeout to the user contacts service is similar to snapshotting:
 
 ```js
