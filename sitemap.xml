@@ -4,7 +4,6 @@
 <url> <loc>https://nact.io/lesson/javascript/actor-communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/lesson/javascript/logging-and-monitoring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/hierarchy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/persist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/javascript/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -18,7 +17,6 @@
 <url> <loc>https://nact.io/lesson/reasonml/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/hierarchy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/lesson/reasonml/logging-and-monitoring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/persist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/lesson/reasonml/snapshotting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
