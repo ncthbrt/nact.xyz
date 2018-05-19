@@ -13,7 +13,7 @@ tags:
     - nodejs
 ---
 You start to see the biggest benefit from snapshotting best when your state is small in size, and persisted events are many. 
-However sometimes you may on occasion need to render the results of a sequence of events in a different form.
+However sometimes you may on occasion need to render a sequence of events into a different form.
 
 For example a real world problem I had was being able to view a list of transactions which modified a domain entity. You may not need this sequence all the time, but it is still required to be there. The problem with storing all the events in state is that now your state is just slightly larger than the sequence of events which led to that state, and hence snapshotting in fact counter productive. This is a dichotomy solved by the [CQRS pattern](https://martinfowler.com/bliki/CQRS.html). 
 
