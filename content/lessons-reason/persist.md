@@ -12,6 +12,9 @@ tags:
     - reason
     - bucklescript
 ---
+
+> Note: Please take a careful look at the [Decoders and Encoders](/lesson/reasonml/decoders-and-encoders) section to understand an important limitation of persistence actors in Reason.
+
 The contacts service we've been working on *still* isn't very useful. While we've extended the service to support multiple users, it has the unfortunate limitation that it loses the contacts each time the program restarts. To remedy this, nact extends stateful actors by adding a new function: `persist` 
 
 To use `persist`, the first thing we need to do is specify a persistence engine. Currently only a [PostgreSQL](https://github.com/ncthbrt/reason-nact-postgres) engine is available (though it should be easy to create your own). To work with the PostgreSQL engine, install the persistent provider package using the command `npm install --save reason-nact-postgres`. Also ensure you add
@@ -50,3 +53,5 @@ let createContactsService = (parent, userId) =>
 ```
 
 The `~key` parameter supplied when spawning the persistent actor is very important and should be a unique value. The key is used to save and retrieve snapshots and persisted events.
+
+

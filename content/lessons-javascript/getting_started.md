@@ -9,8 +9,8 @@ type: "lesson"
 tags:
     - getting-started
     - nact
-    - javascript
-    - nodejs
+    - reason
+    - bucklescript
 ---
 <!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-stateless-greeter" target="_blank">
   <button>
