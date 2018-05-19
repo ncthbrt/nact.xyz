@@ -171,9 +171,9 @@
       "path---lesson-reasonml-timeouts-dacc4a2a85f499b57075.js.map"
     ],
     "app": [
-      "app-606e30ba640c0344bfe9.js",
+      "app-32cbe902e119a083cb1b.js",
       "build-js-styles.css",
-      "app-606e30ba640c0344bfe9.js.map",
+      "app-32cbe902e119a083cb1b.js.map",
       "build-js-styles.css.map"
     ],
     "path---categories-reasonml": [
@@ -185,16 +185,16 @@
       "path---lesson-reasonml-hierarchy-97991748d32a355fb662.js.map"
     ],
     "path---lesson-reasonml-persistent-queries": [
-      "path---lesson-reasonml-persistent-queries-dde2828d3980fc40042e.js",
-      "path---lesson-reasonml-persistent-queries-dde2828d3980fc40042e.js.map"
+      "path---lesson-reasonml-persistent-queries-187b174e0785f0727e7a.js",
+      "path---lesson-reasonml-persistent-queries-187b174e0785f0727e7a.js.map"
     ],
     "path---tags-bucklescript": [
       "path---tags-bucklescript-381d0dfb4a1e999cdf6c.js",
       "path---tags-bucklescript-381d0dfb4a1e999cdf6c.js.map"
     ],
     "path---lesson-javascript-persistent-queries": [
-      "path---lesson-javascript-persistent-queries-a905fa95b103fd84f0b9.js",
-      "path---lesson-javascript-persistent-queries-a905fa95b103fd84f0b9.js.map"
+      "path---lesson-javascript-persistent-queries-3faa1c97ef1eae2d72dd.js",
+      "path---lesson-javascript-persistent-queries-3faa1c97ef1eae2d72dd.js.map"
     ],
     "path---lesson-javascript-supervision": [
       "path---lesson-javascript-supervision-7b05e61a7f592b2de470.js",
