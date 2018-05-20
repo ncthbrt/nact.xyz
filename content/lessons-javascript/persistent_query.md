@@ -73,3 +73,8 @@ let spawnWallet = (walletId, parent) =>
   );
 ```
 
+## Differences and similarities between persistent actors and persistent queries
+
+Persistent queries don't have a lifecycle like actors, therefore they can't `shutdownAfter`. However the current result of a query is cached in memory, the cache is available for an unbounded amount of time by default, unless a `cacheDuration` is specified.
+
+Like persistent actors, persistent queries can have decoders and encoders. They may also be snapshotted. An important difference to note when snapshotting, is that a `snapshotKey` must be added along with the usual `snapshotEvery` property. 
