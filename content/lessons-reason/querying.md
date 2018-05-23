@@ -29,7 +29,7 @@ What are the basic requirements of a basic address book API? It should be able t
  - Update an existing contact
  - Delete a contact
 
-Because actor are message driven, let us define the message types used between the api and actor system:
+Because actors are message driven, let us define the message types used between the api and actor system:
 
 ```reason
 type contactId =
