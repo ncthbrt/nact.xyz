@@ -80,10 +80,10 @@ let removeContact = ({contacts, seqNumber}, sender, contactId) => {
   let nextContacts = ContactIdMap.remove(contactId, contacts);
   let msg =
     if (contacts === nextContacts) {
+      (contactId, NotFound)
+    } else {
       let contact = ContactIdMap.find(contactId, contacts);
       (contactId, Success(contact))
-    } else {
-      (contactId, NotFound)
     };
   sender <-< msg;
   {contacts: nextContacts, seqNumber}
@@ -94,9 +94,9 @@ let updateContact = ({contacts, seqNumber}, sender, contactId, contact) => {
     ContactIdMap.remove(contactId, contacts) |> ContactIdMap.add(contactId, contact);
   let msg =
     if (nextContacts === contacts) {
-      (contactId, Success(contact))
-    } else {
       (contactId, NotFound)
+    } else {
+      (contactId, Success(contact))
     };
   sender <-< msg;
   {contacts: nextContacts, seqNumber}
