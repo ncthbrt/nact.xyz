@@ -18,7 +18,7 @@ Actors are arranged hierarchically, they can create child actors of their own, a
 
 Up till now we've been creating actors which are children of the actor system (which is a pseudo actor). However in a real system, this would be considered an anti pattern, for much the same reasons as placing all your code in a single file is an anti-pattern. By exploiting the actor hierarchy, you can enforce a separation of concerns and encapsulate system functionality, while providing a coherent means of reasoning with failure and system shutdown. 
 
-Let us imagine that the single user contacts service was simple a part of some larger system; an email campaign management API for example.  A potentially valid system could perhaps be represented by the diagram below. 
+Let us imagine that the single user contacts service was simply a part of some larger system; an email campaign management API for example.  A potentially valid system could perhaps be represented by the diagram below. 
 
 ![Image](/img/hierarchy-diagram.svg)
 
