@@ -60,8 +60,6 @@ This should print `"Hello Erlich Bachman"` to the console.
 
 > Note: Stateless actors can service multiple requests at the same time. Statelessness means that such actors do not have to cater for concurrency issues.
 
-To complete this example, we need to shutdown our system. We can do this by calling `stop(system)`
-
 An alternative to calling dispatch is opening `Nact.Operators` and using the  `<-<` operator:
 
 ```reason
