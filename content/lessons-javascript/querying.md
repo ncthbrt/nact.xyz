@@ -66,7 +66,7 @@ app.listen(process.env.PORT || 3000, function () {
 });
 ```
 
-Because actor are message driven, let us define the message types used between the express api and actor system:
+Because actors are message driven, let us define the message types used between the express api and actor system:
 
 ```js
  const ContactProtocolTypes = {
