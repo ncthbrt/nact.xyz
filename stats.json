@@ -125,8 +125,8 @@
       "path---community-586c7e095e534a3909ec.js.map"
     ],
     "path---lesson-javascript-decoders-and-encoders": [
-      "path---lesson-javascript-decoders-and-encoders-28d7dafbb994155c755c.js",
-      "path---lesson-javascript-decoders-and-encoders-28d7dafbb994155c755c.js.map"
+      "path---lesson-javascript-decoders-and-encoders-aab923b6bbf2249aff3f.js",
+      "path---lesson-javascript-decoders-and-encoders-aab923b6bbf2249aff3f.js.map"
     ],
     "path---lesson-reasonml-actor-communication": [
       "path---lesson-reasonml-actor-communication-95d5f2f06730648357ec.js",
@@ -171,9 +171,9 @@
       "path---lesson-reasonml-timeouts-dacc4a2a85f499b57075.js.map"
     ],
     "app": [
-      "app-32cbe902e119a083cb1b.js",
+      "app-606e30ba640c0344bfe9.js",
       "build-js-styles.css",
-      "app-32cbe902e119a083cb1b.js.map",
+      "app-606e30ba640c0344bfe9.js.map",
       "build-js-styles.css.map"
     ],
     "path---categories-reasonml": [
