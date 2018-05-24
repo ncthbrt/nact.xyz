@@ -60,11 +60,10 @@ let system = start(/* Specify a concrete persistence engine here */);
 let actor =
   spawnPersistent(
     system,    
-    (state = [], msg, ctx) => {
-      console.log(msg);
-      let nextState = () => Promise.resolve([msg, ...state]);
+    async (state = [], msg, ctx) => {
+      console.log(msg);      
       if (! ctx.recovering) {
-        ctx.persist(msg);
+        await ctx.persist(msg);
       }
       return [msg, ...state];
     },
