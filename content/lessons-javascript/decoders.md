@@ -37,11 +37,11 @@ it is processed by the actor. Version one is encoded in plain text.
 
 ```reason
 /* Rot13 code */
-let a = Char.code('a');
+let a = 'a'.charCodeAt('a');
 
-let toPositionInAlphabet = (c) => c.charCodeAt(0) - 'a'.charCodeAt(0);
+let toPositionInAlphabet = (c) => c.charCodeAt(0) - a;
 
-let fromPositionInAlphabet = (c) => String.fromCharCode(c + 'a'.charCodeAt(0));
+let fromPositionInAlphabet = (c) => String.fromCharCode(c + a);
 
 let rot13 = str => [...str].map(chr => fromPositionInAlphabet((toPositionInAlphabet(chr) + 13) % 26)).join('');
 
@@ -53,7 +53,7 @@ let decoder = (json) => {
   }
 };
 
-let encoder = (msg) => { version: 1, text: msg.text };
+let encoder = (msg) => ({ version: 1, text: msg.text });
 
 let system = start(/* Specify a concrete persistence engine here */);
 
@@ -61,12 +61,12 @@ let actor =
   spawnPersistent(
     system,    
     (state = [], msg, ctx) => {
-      Js.log(msg);
-      let nextState = () => Js.Promise.resolve([msg, ...state]);
+      console.log(msg);
+      let nextState = () => Promise.resolve([msg, ...state]);
       if (! ctx.recovering) {
         ctx.persist(msg);
       }
-      return [msg, ...state]
+      return [msg, ...state];
     },
     'da-vinci-code',
     'da-vinci-code-actor',
