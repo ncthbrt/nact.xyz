@@ -37,7 +37,7 @@ it is processed by the actor. Version one is encoded in plain text.
 
 ```reason
 /* Rot13 code */
-let a = 'a'.charCodeAt('a');
+let a = 'a'.charCodeAt(0);
 
 let toPositionInAlphabet = (c) => c.charCodeAt(0) - a;
 
