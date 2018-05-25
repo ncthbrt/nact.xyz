@@ -26,7 +26,7 @@ let system = start(~persistenceEngine=NactPostgres.create("CONNECTION_STRING"), 
 
 The optional parameter `~persistenceEngine` adds the persistence plugin to the system using the specified persistence engine.
 
-Now the only remaining work is to modify the contacts service to allow persistence. When the actor start up, it first receives all the persisted messages and then can begin processing new ones. 
+Now the only remaining work is to modify the contacts service to allow persistence. When the actor starts up, it first receives all the persisted messages and then can begin processing new ones.
 
 ```reason
 let createContactsService = (parent, userId) =>
