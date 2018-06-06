@@ -6,7 +6,7 @@ category: "tech"
 type: "post"
 tags: []    
 ---
-ReasonNact's latest release is a breaking change. In previous versions, the initial state was supplied as a plain value. *Now* the initial state must be specified as a function which takes in the actor's context. (See [Stateful Actors](https://nact.io/lesson/reasonml/stateful-actors) for an example).
+ReasonNact's latest release is a breaking change. In previous versions, the initial state was supplied as a plain value. *Now* the initial state must be specified as a function which takes in the actor's context. (See [Stateful Actors](/lesson/reasonml/stateful-actors) ) for an example).
 
 While in many cases this change adds a few redundant characters, it solves a problem we have frequently experienced: Creating adapters, child actors and anything that lives in the state object which requires the actor reference for instantiation.
 
