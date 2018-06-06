@@ -26,7 +26,7 @@ let createContactsService = (parent, userId) =>
     (state, (sender, msg), {persist}) => {
       /* Same function as before */
     }    
-    {contacts: ContactIdMap.empty, seqNumber: 0}
+    (ctx) => {contacts: ContactIdMap.empty, seqNumber: 0}
   );
 ```
 Here we are using the optional argument `snapshotEvery` to instruct nact to take a snapshot every 10 messages.

@@ -25,6 +25,6 @@ let createContactsService = (parent, userId) =>
     (state, (sender, msg), {persist}) => {
       /* Same function as before */
     }    
-    {contacts: ContactIdMap.empty, seqNumber: 0}
+    (ctx) => {contacts: ContactIdMap.empty, seqNumber: 0}
   );
 ```

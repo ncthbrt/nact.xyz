@@ -66,7 +66,7 @@ let hello =
       sender <-< World(adapter);
       Js.Promise.resolve(Some(adapter))
     },
-    None
+    (ctx) => None
   );
 
 hello <-< Hello(world);

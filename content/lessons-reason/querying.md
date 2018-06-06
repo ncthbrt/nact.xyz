@@ -130,7 +130,7 @@ let contactsService =
         }
       )
       |> Js.Promise.resolve,
-    {contacts: ContactIdMap.empty, seqNumber: 0}
+    (ctx) => {contacts: ContactIdMap.empty, seqNumber: 0}
   );
 ```
 

@@ -98,7 +98,7 @@ let spawnWallet = (walletId, parent) =>
         );
         Js.Promise.resolve(state);
       },
-    {
+    (ctx) => {
       Wallet.balance: 0,
       id: Wallet.WalletId(walletId),
       transactions: transactionsQuery(parent, walletId),

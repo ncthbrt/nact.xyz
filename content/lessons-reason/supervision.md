@@ -118,6 +118,6 @@ let contactsService =
         }
       )
     },
-    StringMap.empty
+    (ctx) => StringMap.empty
   );
 ```

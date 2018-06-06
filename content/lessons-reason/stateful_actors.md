@@ -32,7 +32,7 @@ let statefulGreeter =
         [name, ...state] |> Js.Promise.resolve;
       }
     },
-    []
+    (ctx) => []
   );
 ```
-Note the addition of the extra final parameter. This parameter (in this case `[]`) represents the actor's initial state.
+Note the addition of the extra parameter. This parameter (in this case `(ctx) => []`) is a function which takes in the actor context and returns the actor's initial state.

@@ -86,6 +86,6 @@ let actor =
         nextState()
       }
     },
-    []
+    (ctx) => []
   );
 ```
