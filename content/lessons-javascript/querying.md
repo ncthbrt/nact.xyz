@@ -38,7 +38,7 @@ What are the basic requirements of a basic address book API? It should be able t
 To implement this functionality, we'll need to create the following endpoints:
   - POST `/api/contacts` - Create a new contact 
   - GET `/api/contacts` - Fetch all contacts
-  - GET `/api/contacts` - Fetch a specific contact
+  - GET `/api/contacts/:contact_id` - Fetch a specific contact
   - PATCH `/api/contacts/:contact_id` - Update an existing contact
   - DELETE `/api/contacts/:contact_id` - Delete a contact
 
