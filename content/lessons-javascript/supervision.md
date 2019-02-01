@@ -15,9 +15,9 @@ tags:
 Actor systems are often designed around the *let it crash* philosophy.
 This thesis is motivated by a desire to reduce the amount of infrastructural code which often obfuscates domain logic. 
 
-How on earth do we achieve system resilience if we just let our actors crash? The answer lies in supervision: If an crashes, a policy defined on the actor has an opportunity to make a decision about what to do about the fault. Erlang was one of the first platforms to adopt this strategy for dealing with faults, and was used to achieve jaw dropping reliability when building out the Ericsson telephone exchanges (on the order of nine 9s of availability). 
+How on earth do we achieve system resilience if we just let our actors crash? The answer lies in supervision: If an actor crashes, a policy defined on the actor has an opportunity to make a decision about what to do about the fault. Erlang was one of the first platforms to adopt this strategy for dealing with faults, and was used to achieve jaw dropping reliability when building out the Ericsson telephone exchanges (on the order of nine 9s of availability). 
 
-Nact's supervision system works similar to that of Erlang. If an actor crashes, it is stopped by default. Specifying the `onCrash` option allows one to override the supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, and the context of the actor. The supervision policy returns a decision (which may be may be asynchronous). The available decisions are enumerated in the following table:
+Nact's supervision system works similar to that of Erlang. If an actor crashes, it is stopped by default. Specifying the `onCrash` option allows one to override the supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, and the context of the actor. The supervision policy returns a decision (which may be asynchronous). The available decisions are enumerated in the following table:
 
 <table class='definitions'>
     <thead>
