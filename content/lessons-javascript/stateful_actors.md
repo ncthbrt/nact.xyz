@@ -40,5 +40,3 @@ const statefulGreeter = spawn(
   'stateful-greeter'
 );
 ```
-
-If no state is returned or the state returned is `undefined` or `null`, stateful actors automatically shut down.
