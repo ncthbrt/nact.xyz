@@ -157,7 +157,6 @@ class Navigation extends React.Component {
             <span>{this.state.menuOpen ? '✕' : '☰'}</span>
           </button>
         </Hamburger>
-
         <NavLinks menuOpen={this.state.menuOpen} className={(this.props.isSubpage ? ' ' : 'animated fadeIn')}>
           {this.props.isSubpage && <Search>
             <img src='/img/search.svg' className='icon' />

@@ -37,7 +37,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const blogPage = path.resolve('src/templates/blog.jsx');
     const lessonPage = path.resolve('src/templates/lesson.jsx');
     const tagPage = path.resolve('src/templates/tag.jsx');
-    const categoryPage = path.resolve('src/templates/category.jsx');
     resolve(
       graphql(
         `{
@@ -46,7 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               node {
                 frontmatter {
                   tags
-                  category
+                  programming_language
                   type
                   language
                 }
@@ -65,7 +64,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const tagSet = new Set();
-        const categorySet = new Set();
         result.data.allMarkdownRemark.edges.forEach(edge => {
           if (edge.node.frontmatter.tags) {
             edge.node.frontmatter.tags.forEach(tag => {
@@ -73,18 +71,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             });
           }
 
-          if (edge.node.frontmatter.category) {
-            categorySet.add(edge.node.frontmatter.category);
-          }
-
           if (edge.node.frontmatter.type === 'lesson') {
             createPage({
-              path: `/${edge.node.frontmatter.language.toLowerCase()}/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
+              path: `/${edge.node.frontmatter.language.toLowerCase()}/${edge.node.frontmatter.type}/${edge.node.frontmatter.programming_language}${edge.node.fields.slug}`,
               component: lessonPage,
               context: {
                 slug: edge.node.fields.slug,
-                category: edge.node.frontmatter.category,
-                language: edge.node.frontmatter.language,
+                programming_language: edge.node.frontmatter.programming_language,
+                language: edge.node.frontmatter.language
               }
             });
           }
@@ -97,17 +91,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             component: tagPage,
             context: {
               tag
-            }
-          });
-        });
-
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryPage,
-            context: {
-              category
             }
           });
         });

@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import config from "../../../data/SiteConfig";
 
 class SEO extends Component {
-  render() {
+  render () {
     const { postNode, postPath, postSEO } = this.props;
     let title;
     let description;
@@ -15,7 +15,6 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
       postURL = config.siteUrl + config.pathPrefix + postPath;
     } else {
       title = config.siteTitle;

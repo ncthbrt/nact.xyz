@@ -2,9 +2,8 @@
 title: "액터의 계층 구조"
 lesson: 4
 chapter: 2
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "22/03/2019"
-category: "javascript"
+programming_language:  "javascript"
 type: "lesson"
 language: ko_KR
 tags:

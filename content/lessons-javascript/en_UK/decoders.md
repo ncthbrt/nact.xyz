@@ -2,9 +2,8 @@
 title: "Decoders and Encoders"
 lesson: 2
 chapter: 4
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "28/01/2018"
-category: "javascript"
+programming_language:  "javascript"
 type: "lesson"
 language: en_UK
 tags:

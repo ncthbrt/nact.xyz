@@ -2,9 +2,8 @@
 title: "Actor Communication"
 lesson: 2
 chapter: 2
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"
-category: "javascript"
+programming_language:  "javascript"
 type: "lesson"
 language: en_UK
 tags:

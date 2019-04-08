@@ -2,10 +2,9 @@
 title: "Snapshotting"
 lesson: 2
 chapter: 3
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"
 language: en_UK
-category: "reasonml"
+programming_language:  "reasonml"
 type: "lesson"
 tags:
     - getting-started

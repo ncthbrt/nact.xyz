@@ -8,7 +8,7 @@ import config from '../../data/SiteConfig';
 import TableOfContents from '../components/Layout/TableOfContents';
 
 export default class LessonTemplate extends React.Component {
-  render() {
+  render () {
     const { slug, language } = this.props.pathContext;
 
     const postNode = this.props.data.postBySlug;
@@ -113,14 +113,14 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!, $category: String!, $language: String!) {
-    allPostTitles: allMarkdownRemark(filter: { frontmatter: { category:{ eq: $category }, language:{ eq: $language } }}){
+  query LessonBySlug($slug: String!, $programming_language: String!, $language: String!) {
+    allPostTitles: allMarkdownRemark(filter: { frontmatter: { programming_language:{ eq: $programming_language }, language:{ eq: $language } }}){
         edges {
           node {
             frontmatter {
               title
               lesson
-              category
+              programming_language
               chapter              
               type                            
             }
@@ -130,14 +130,14 @@ export const pageQuery = graphql`
           }
         }
       }
-      postBySlug: markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: { category: { eq: $category }}) {
+      postBySlug: markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: { programming_language: { eq: $programming_language }}) {
         html
         timeToRead
         excerpt
         frontmatter {
           title          
           date
-          category
+          programming_language
           tags          
         }
         fields {

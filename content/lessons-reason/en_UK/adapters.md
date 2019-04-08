@@ -2,9 +2,8 @@
 title: "Adapters"
 lesson: 6
 chapter: 2
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "28/01/2018"
-category: "reasonml"
+programming_language:  "reasonml"
 language: en_UK
 type: "lesson"
 tags:

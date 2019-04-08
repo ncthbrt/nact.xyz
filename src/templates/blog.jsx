@@ -79,8 +79,7 @@ query AllBlogPosts {
         excerpt
         frontmatter {
           title                    
-          date
-          category
+          date          
           tags
           language
         }

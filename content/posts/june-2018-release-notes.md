@@ -1,8 +1,6 @@
 ---
 title: "ReasonNact v5.0.0 Release Notes"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2018-06-06"
-category: "tech"
 type: "post"
 language: en_UK
 tags: []    

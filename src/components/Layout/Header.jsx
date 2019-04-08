@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navigation from './Navigation';
+import LanguageDrawer from './LanguageDrawer';
 require('../../../node_modules/animate.css/animate.min.css');
 
 class MainHeader extends React.Component {

@@ -15,8 +15,8 @@ class TableOfContents extends React.Component {
       if (post.node.frontmatter.type === type) {
         const postNode = {
           title: post.node.frontmatter.title,
-          path: `/${language}/${type}/${post.node.frontmatter.category}${post.node.fields.slug}`,
-          category: post.node.frontmatter.category,
+          path: `/${language}/${type}/${post.node.frontmatter.programming_language}${post.node.fields.slug}`,
+          programming_language: post.node.frontmatter.programming_language,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter
         };
