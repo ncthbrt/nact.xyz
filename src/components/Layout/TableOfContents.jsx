@@ -7,14 +7,15 @@ import styled from 'styled-components';
 
 class TableOfContents extends React.Component {
   buildNodes() {
-    const { posts, language } = this.props;
+    let { posts, language } = this.props;
+    language = language.toLowerCase();
     const type = this.props.contentsType;
     const postNodes = [];
     posts.forEach(post => {
       if (post.node.frontmatter.type === type) {
         const postNode = {
           title: post.node.frontmatter.title,
-          path: `/${language.toLowerCase()}/${type}/${post.node.frontmatter.category}${post.node.fields.slug}`,
+          path: `/${language}/${type}/${post.node.frontmatter.category}${post.node.fields.slug}`,
           category: post.node.frontmatter.category,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter
@@ -61,7 +62,7 @@ class TableOfContents extends React.Component {
       listItems.push(
         <li className='chapter' key={idx}>
           <h5 className='tocHeading'>
-            {chapterTitles[idx]}
+            {chapterTitles[this.props.language.toLowerCase()][idx]}
           </h5>
           <ul className='chapterItems'>
             {chapterLessons}
