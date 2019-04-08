@@ -109,12 +109,13 @@ display: inline-flex;
     content: ' REASON DOCS';
   }
 }
+
 `;
 
 class Navigation extends React.Component {
   constructor(...args) {
     super(...args);
-    this.state = { menuOpen: false, docSearchMounted: false };
+    this.state = { menuOpen: false, docSearchMounted: false, languageMenuOpen: false};
   }
   mountDocsearch() {
     const searchFilter = window.location.pathname.indexOf('javascript') >= 0
@@ -138,11 +139,12 @@ class Navigation extends React.Component {
   toggleMenu() {
     this.setState({ menuOpen: !this.state.menuOpen });
   }
+
+  toggleLanguageMenu() {
+    this.setState({ languageMenuOpen: !this.state.languageMenuOpen });
+  }
+
   render() {
-    // let rootLanguagePath = '/en_uk';
-    // if (this.props.isSubpage && this.props.location.pathname !== '/blog' && this.props.location.pathname !== 'community') {
-    //   rootLanguagePath = this.props.location.pathname.substring(0, 5);
-    // }
     return (
       <NavContainer isSubpage={this.props.isSubpage}>
 
@@ -161,14 +163,19 @@ class Navigation extends React.Component {
           {this.props.isSubpage && <Search>
             <img src='/img/search.svg' className='icon' />
             <input placeholder='search docs' type='search' ref={() => this.mountDocsearch()} className='search-box' id='search-box' />
-          </Search>}
-          <div><Link className='nav-link language-link-js' to={'/en_uk/lesson/javascript/introduction'}> <img alt='javascript docs' style={{ height: '1em' }} src={`/logos/language-logo_js${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
-          <div className='nav-link language-divider' style={{ height: '1em' }}>/</div>
-          <div><Link className='nav-link language-link-reason' to={'/en_uk/lesson/reasonml/introduction'} > <img alt='reason docs' style={{ height: '1em' }} src={`/logos/language-logo_reason${this.props.isSubpage ? '' : '-inverted'}.svg`} /> </Link></div>
+          </Search>}      
+          <div>
+            <a onClick={() => this.toggleLanguageMenu()} className='nav-link' href='#'>
+              <svg style={{ height: '1em' }} width='24' height='24' viewBox='0 0 24 24'>
+                <path fill={this.props.isSubpage ? 'white' : '#FC5B5B'} d='M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z' />
+              </svg>
+              LANGUAGE
+            </a>
+          </div>
           <div><Link className='nav-link' to='/blog' > BLOG </Link></div>
           <div><Link className='nav-link' to='/community' > COMMUNITY </Link></div>
           <div><a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a></div>
-        </NavLinks>
+        </NavLinks>        
       </NavContainer>
     );
   }
