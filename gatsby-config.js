@@ -145,7 +145,7 @@ module.exports = {
                     fields { slug }
                     frontmatter {
                       title
-                      cover
+                      language                      
                       date
                       category
                       tags

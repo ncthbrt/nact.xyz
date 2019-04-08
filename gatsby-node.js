@@ -2,8 +2,8 @@ const path = require('path');
 const _ = require('lodash');
 const webpackLodashPlugin = require('lodash-webpack-plugin');
 
-exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
-  const {createNodeField} = boundActionCreators;
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
   let slug;
   if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
@@ -26,12 +26,12 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
-    createNodeField({node, name: 'slug', value: slug});
+    createNodeField({ node, name: 'slug', value: slug });
   }
 };
 
-exports.createPages = ({graphql, boundActionCreators}) => {
-  const {createPage} = boundActionCreators;
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
     const blogPage = path.resolve('src/templates/blog.jsx');
@@ -48,6 +48,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                   tags
                   category
                   type
+                  language
                 }
                 fields {
                   slug
@@ -78,11 +79,12 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 
           if (edge.node.frontmatter.type === 'lesson') {
             createPage({
-              path: `/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
+              path: `/${edge.node.frontmatter.language.toLowerCase()}/${edge.node.frontmatter.type}/${edge.node.frontmatter.category}${edge.node.fields.slug}`,
               component: lessonPage,
               context: {
                 slug: edge.node.fields.slug,
-                category: edge.node.frontmatter.category
+                category: edge.node.frontmatter.category,
+                language: edge.node.frontmatter.language,
               }
             });
           }
@@ -120,7 +122,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   });
 };
 
-exports.modifyWebpackConfig = ({config, stage}) => {
+exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === 'build-javascript') {
     config.plugin('Lodash', webpackLodashPlugin, null);
   }

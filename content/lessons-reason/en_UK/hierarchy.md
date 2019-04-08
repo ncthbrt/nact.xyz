@@ -4,21 +4,16 @@ lesson: 4
 chapter: 2
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"
-category: "javascript"
+category: "reasonml"
+language: en_UK
 type: "lesson"
 tags:
     - getting-started
     - nact
-    - javascript
-    - nodejs
+    - reason
+    - bucklescript
 ---
-<!-- <a class="remix-button" href="https://glitch.com/edit/#!/remix/nact-contacts-2" target="_blank">
-  <button>
-    <img src="/img/code-fork-symbol.svg"/> REMIX
-  </button>
-</a> -->
-
-The application we made in the [querying](/lesson/javascript/querying) section isn't very useful. For one it only supports a single user's contacts, and secondly it forgets all the user's contacts whenever the system restarts. In this section we'll solve the multi-user problem by exploiting an important feature of any blue-blooded actor system: the hierarchy.
+The application we made in the [querying](/lesson/reasonml/querying) section isn't very useful. For one it only supports a single user's contacts, and secondly it forgets all the user's contacts whenever the system restarts. In this section we'll solve the multi-user problem by exploiting an important feature of any blue-blooded actor system: the hierarchy.
 
 Actors are arranged hierarchically, they can create child actors of their own, and accordingly every actor has a parent. The lifecycle of an actor is tied to its parent; if an actor stops, then it's children do too.
 
@@ -38,55 +33,55 @@ Let us focus on the contacts service to see how we can make effective of use of 
 
 Modifying our original service is as simple as the following:
 
-```js
-const spawnUserContactService = (parent, userId) => spawn(
-  parent,
-  // same function as before
-  userId
-);
+```reason
+let createContactsService = (parent, userId) =>
+  spawn(
+    ~name=userId,
+    parent,
+    (state, (sender, msg), _) =>
+      (
+        switch msg {
+        | CreateContact(contact) => createContact(state, sender, contact)
+        | RemoveContact(contactId) => removeContact(state, sender, contactId)
+        | UpdateContact(contactId, contact) => updateContact(state, sender, contactId, contact)
+        | FindContact(contactId) => findContact(state, sender, contactId)
+        }
+      )
+      |> Js.Promise.resolve,
+    (ctx) => {contacts: ContactIdMap.empty, seqNumber: 0}
+  );
 ```
 
-Now we need to create the parent contact service:
+Now we need to create the parent contact service. The parent checks if it has a child with the userId as the key. If it does not, it spawns the 
+child actor:
 
-```js
-const spawnContactsService = (parent) => spawnStateless(
-  parent,
-  (msg, ctx) => {
-    const userId = msg.userId;
-    let childActor;
-    if(ctx.children.has(userId)){
-      childActor = ctx.children.get(userId);
-    } else {
-      childActor = spawnUserContactService(ctx.self, userId);            
-    }
-    dispatch(childActor, msg, ctx.sender);
-  },
-  'contacts'
-);
+```reason
+
+let contactsService =
+  spawn(
+    system,
+    (children, (sender, userId, msg), ctx) => {
+      let potentialChild =
+        try (Some(StringMap.find(userId, children))) {
+        | _ => None
+        };
+      Js.Promise.resolve(
+        switch potentialChild {
+        | Some(child) =>
+          dispatch(child, (sender, msg));
+          children
+        | None =>
+          let child = createContactsService(ctx.self, userId);
+          dispatch(child, (sender, msg));
+          StringMap.add(userId, child, children)
+        }
+      )
+    },
+    (ctx) => StringMap.empty
+  );
 ```
 
 These two modifications show the power of an actor hierarchy. The contact service doesn't need to know the implementation details of its children (and doesn't even have to know about what kind of messages the children can handle). The children also don't need to worry about multi tenancy and can focus on the domain.
-
-To complete the example, we finally adjust the API endpoints:
-
-```js
-
-app.get('/api/:user_id/contacts', (req,res) => performQuery({ type: GET_CONTACTS, userId: req.params.user_id }, res));
-
-app.get('/api/:user_id/contacts/:contact_id', (req,res) => 
-  performQuery({ type: GET_CONTACT, userId: req.params.user_id, contactId: req.params.contact_id }, res)
-);
-
-app.post('/api/:user_id/contacts', (req,res) => performQuery({ type: CREATE_CONTACT, payload: req.body }, res));
-
-app.patch('/api/:user_id/contacts/:contact_id', (req,res) => 
-  performQuery({ type: UPDATE_CONTACT, userId: req.params.user_id, contactId: req.params.contact_id, payload: req.body }, res)
-);
-
-app.delete('/api/:user_id/contacts/:contact_id', (req,res) => 
-  performQuery({ type: REMOVE_CONTACT, userId: req.params.user_id, contactId: req.params.contact_id }, res)
-);
-```
 
 Now the only thing remaining for a MVP of our contacts service is some way of persisting changes...
 

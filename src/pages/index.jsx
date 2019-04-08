@@ -8,20 +8,20 @@ import MainHeader from '../components/Layout/Header';
 import CtaButton from '../components/CtaButton';
 
 class Index extends React.Component {
-  render () {
+  render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <div className='index-container'>
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <main style={{display: 'flex', flexDirection: 'column'}}>
-          <span style={{flex: 1, minHeight: '65vh'}}>
+        <main style={{ display: 'flex', flexDirection: 'column' }}>
+          <span style={{ flex: 1, minHeight: '65vh' }}>
             <MainHeader
               siteTitle={config.siteTitle}
               siteDescription={config.siteDescription}
               location={this.props.location}
               logo={config.siteLogo}
-          />
+            />
           </span>
           <BodyContainer>
             <BodyContents>
@@ -44,8 +44,8 @@ class Index extends React.Component {
               <h2>Getting Started</h2>
               <p>Both the ReasonML and JS libraries are 1<sup>st</sup> class citizens. This means 100% unit test coverage, full documentation and support by project maintainers.</p>
               <p>Learning the ins and outs of the framework should not take more than an evening. The hello world example in particular should take less than 15 minutes.</p>
-              <CtaButton to={'/lesson/reasonml/introduction'}><img style={{height: '2.5rem'}} src='/logos/language-logo_reason-inverted.svg' /> REASONML</CtaButton>
-              <CtaButton to={'/lesson/javascript/introduction'}><img style={{height: '2.5rem'}} src='/logos/language-logo_js-inverted.svg' /> JAVASCRIPT</CtaButton>
+              <CtaButton to={'/en_uk/lesson/reasonml/introduction'}><img style={{ height: '2.5rem' }} src='/logos/language-logo_reason-inverted.svg' /> REASONML</CtaButton>
+              <CtaButton to={'/en_uk/lesson/javascript/introduction'}><img style={{ height: '2.5rem' }} src='/logos/language-logo_js-inverted.svg' /> JAVASCRIPT</CtaButton>
             </BodyContentsInverted>
           </BodyContainerInverted>
         </main>
@@ -100,8 +100,7 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
-            tags
-            cover
+            tags            
             date
           }
         }

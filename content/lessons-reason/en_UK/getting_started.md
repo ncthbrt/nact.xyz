@@ -5,6 +5,7 @@ chapter: 1
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "11/12/2017"
 category: "reasonml"
+language: en_UK
 type: "lesson"
 tags:
     - getting-started

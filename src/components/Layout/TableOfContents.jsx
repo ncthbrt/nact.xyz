@@ -6,15 +6,15 @@ import styled from 'styled-components';
 // You'll also need to add your chapters to siteConfig
 
 class TableOfContents extends React.Component {
-  buildNodes () {
-    const {posts} = this.props;
+  buildNodes() {
+    const { posts, language } = this.props;
     const type = this.props.contentsType;
     const postNodes = [];
     posts.forEach(post => {
       if (post.node.frontmatter.type === type) {
         const postNode = {
           title: post.node.frontmatter.title,
-          path: `/${type}/${post.node.frontmatter.category}${post.node.fields.slug}`,
+          path: `/${language.toLowerCase()}/${type}/${post.node.frontmatter.category}${post.node.fields.slug}`,
           category: post.node.frontmatter.category,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter
@@ -38,7 +38,7 @@ class TableOfContents extends React.Component {
     return postNodeChapters;
   }
 
-  nodeListItems () {
+  nodeListItems() {
     const postNodeChapters = this.buildNodes();
     const listItems = [];
     const chapterTitles = this.props.chapterTitles;
@@ -72,7 +72,7 @@ class TableOfContents extends React.Component {
     return listItems;
   }
 
-  render () {
+  render() {
     return (
       <TableOfContentsContainer>
         <ul>

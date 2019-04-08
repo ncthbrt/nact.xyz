@@ -78,11 +78,11 @@ query AllBlogPosts {
         timeToRead
         excerpt
         frontmatter {
-          title
-          cover          
+          title                    
           date
           category
           tags
+          language
         }
         fields {
           slug

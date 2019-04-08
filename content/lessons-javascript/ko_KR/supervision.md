@@ -6,6 +6,7 @@ cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "22/03/2019"
 category: "javascript"
 type: "lesson"
+language: ko_KR
 tags:
     - getting-started
     - nact

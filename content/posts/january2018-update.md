@@ -4,6 +4,7 @@ cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2018-01-30"
 category: "tech"
 type: "post"
+language: en_UK
 tags: []    
 ---
 ## New features

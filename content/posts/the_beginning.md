@@ -4,6 +4,7 @@ cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2017-12-18"
 category: "tech"
 type: "post"
+language: en_UK
 tags: []    
 ---
 Midway through 2017, I was due to start a job at [Root](https://root.co.za). My previous job had a .NET stack, which is where I'd learnt Akka. I'd come to really appreciate the benefits and constraints provided by an actor system. Root's stack used Node.js however, and while there are one or two actor frameworks available, it felt that they had quite different goals: focusing on performance first. From my experience introducing Akka to my colleagues, I feel that getting the ergonomics and pedagogical aspects right from the start is of greater importance. Nact is thus being designed to make it easy for software teams to fall into the pit of success. 
