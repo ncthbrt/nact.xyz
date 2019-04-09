@@ -125,9 +125,9 @@
       "path---community-a0e39f21c11f6a62c5ab.js.map"
     ],
     "commons": [
-      "commons-1864a7a0b6bba5e16e13.js",
+      "commons-b84358ceb70cfab23772.js",
       "build-js-styles.css",
-      "commons-1864a7a0b6bba5e16e13.js.map",
+      "commons-b84358ceb70cfab23772.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-tag-jsx": [
@@ -167,8 +167,8 @@
       "path---en-uk-lesson-javascript-getting-started-f5ae57c165e53596d269.js.map"
     ],
     "component---src-templates-blog-jsx": [
-      "component---src-templates-blog-jsx-0e35141cdd6d59b0ffbc.js",
-      "component---src-templates-blog-jsx-0e35141cdd6d59b0ffbc.js.map"
+      "component---src-templates-blog-jsx-a6d78985fa911bf27947.js",
+      "component---src-templates-blog-jsx-a6d78985fa911bf27947.js.map"
     ],
     "path---tags-nact": [
       "path---tags-nact-407695c66538b8f2918f.js",
