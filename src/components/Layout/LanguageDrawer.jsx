@@ -95,7 +95,7 @@ class LanguageDrawer extends React.Component {
     this.state = { open: false, timeout: null };
   }
 
-  componentDidUpdate (prevProps, prevState, snapshot) {
+  componentDidUpdate (prevProps) {
     if (prevProps.menuOpen && !this.props.menuOpen) {
       const timeout = setTimeout(() => {
         this.setState({ open: false, timeout: null });
@@ -131,7 +131,7 @@ class LanguageDrawer extends React.Component {
             <div>
               <ul>
                 <li><Link to='/en_uk/lesson/javascript/introduction'>English (en_uk)</Link></li>
-                <li><Link to='/ko_kr/lesson/javascript/nact-%EC%86%8C%EA%B0%9C'>한국어 (ko_kr)<sup>✸</sup></Link></li>
+                <li><Link to='/ko_kr/lesson/javascript/nact-%EC%86%8C%EA%B0%9C'>한국어 (ko_kr)<sup>*</sup></Link></li>
               </ul>
             </div>
           </LanguageSection>
