@@ -2,6 +2,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import LanguageDrawer from './LanguageDrawer';
+
 require('../../../node_modules/animate.css/animate.min.css');
 
 const NavContainer = styled.div`
@@ -109,15 +111,14 @@ display: inline-flex;
     content: ' REASON DOCS';
   }
 }
-
 `;
 
 class Navigation extends React.Component {
-  constructor(...args) {
+  constructor (...args) {
     super(...args);
-    this.state = { menuOpen: false, docSearchMounted: false, languageMenuOpen: false};
+    this.state = { menuOpen: false, docSearchMounted: false, languageMenuOpen: false };
   }
-  mountDocsearch() {
+  mountDocsearch () {
     const searchFilter = window.location.pathname.indexOf('javascript') >= 0
       ? 'version:javascript'
       : (window.location.pathname.indexOf('reasonml') >= 0 ? 'version:reasonml' : '');
@@ -136,18 +137,17 @@ class Navigation extends React.Component {
     }
   }
 
-  toggleMenu() {
-    this.setState({ menuOpen: !this.state.menuOpen });
+  toggleMenu () {
+    this.setState({ menuOpen: !this.state.languageMenuOpen && !this.state.menuOpen });
   }
 
-  toggleLanguageMenu() {
-    this.setState({ languageMenuOpen: !this.state.languageMenuOpen });
+  toggleLanguageMenu () {
+    this.setState({ languageMenuOpen: !this.state.languageMenuOpen, menuOpen: false });
   }
 
-  render() {
+  render () {
     return (
       <NavContainer isSubpage={this.props.isSubpage}>
-
         <section>
           {this.props.isSubpage
             ? <Link className='nav-link' to='/' ><img style={{ height: '1.5em' }} alt='logo' src='/logos/logo-wide.svg' /></Link>
@@ -163,7 +163,7 @@ class Navigation extends React.Component {
           {this.props.isSubpage && <Search>
             <img src='/img/search.svg' className='icon' />
             <input placeholder='search docs' type='search' ref={() => this.mountDocsearch()} className='search-box' id='search-box' />
-          </Search>}      
+          </Search>}
           <div>
             <a onClick={() => this.toggleLanguageMenu()} className='nav-link' href='#'>
               <svg style={{ height: '1em' }} width='24' height='24' viewBox='0 0 24 24'>
@@ -175,7 +175,8 @@ class Navigation extends React.Component {
           <div><Link className='nav-link' to='/blog' > BLOG </Link></div>
           <div><Link className='nav-link' to='/community' > COMMUNITY </Link></div>
           <div><a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a></div>
-        </NavLinks>        
+        </NavLinks>
+        <LanguageDrawer menuOpen={this.state.languageMenuOpen} />
       </NavContainer>
     );
   }
