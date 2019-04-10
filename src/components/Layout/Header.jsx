@@ -5,7 +5,7 @@ import LanguageDrawer from './LanguageDrawer';
 require('../../../node_modules/animate.css/animate.min.css');
 
 class MainHeader extends React.Component {
-  getHeader() {
+  getHeader () {
     if (this.props.location) {
       if (this.props.location.pathname === '/') {
         return (
@@ -29,7 +29,7 @@ class MainHeader extends React.Component {
     return <div />;
   }
 
-  render() {
+  render () {
     return this.getHeader();
   }
 }

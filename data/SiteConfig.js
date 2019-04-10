@@ -12,6 +12,10 @@ module.exports = {
   // TODO: Move this literally anywhere better.
   toCChapters: {
     en_uk: [undefined, 'Introduction', 'Core Concepts', 'Persistence', 'Production'],
-    ko_kr: [undefined, 'Introduction', 'Core Concepts', 'Persistence', 'Production']
+    ko_kr: [undefined, '소개', '핵심 개념', '퍼시스턴스', '실무']
+  },
+  headers: {
+    en_uk: { blog: 'BLOG', language: 'LANGUAGE', community: 'COMMUNITY', github: 'GITHUB' },
+    ko_kr: { blog: '블로그', language: '언어', community: '커뮤니티', github: 'GITHUB' }
   }
 };

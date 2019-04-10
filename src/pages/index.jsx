@@ -8,7 +8,7 @@ import MainHeader from '../components/Layout/Header';
 import CtaButton from '../components/CtaButton';
 
 class Index extends React.Component {
-  render() {
+  render () {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <div className='index-container'>
