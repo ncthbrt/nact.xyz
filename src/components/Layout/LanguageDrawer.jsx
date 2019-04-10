@@ -17,7 +17,7 @@ const LanguageDrawerDiv = styled.div`
   height: 100vh;
   z-index: 100000;
   padding: 25px;
-  animation-duration: 300ms;  
+  animation-duration: ${props => props.animationDuration}ms;  
 `;
 
 const HeaderContainer = styled.div`
@@ -92,14 +92,14 @@ const LanguageContainer = styled.div`
 class LanguageDrawer extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { open: false, timeout: null };
+    this.state = { open: false, timeout: null, animationDuration: 200 };
   }
 
   componentDidUpdate (prevProps) {
     if (prevProps.menuOpen && !this.props.menuOpen) {
       const timeout = setTimeout(() => {
         this.setState({ open: false, timeout: null });
-      }, 300);
+      }, this.state.animationDuration);
       this.setState({ timeout: timeout });
     } else if (!prevProps.menuOpen && this.props.menuOpen) {
       this.setState({ open: true });
@@ -108,7 +108,7 @@ class LanguageDrawer extends React.Component {
 
   render () {
     return (
-      <LanguageDrawerDiv menuOpen={this.state.open} className={`animated ${this.props.menuOpen ? 'fadeIn' : 'fadeOut'}`}>
+      <LanguageDrawerDiv animationDuration={this.state.animationDuration} menuOpen={this.state.open} className={`animated ${this.props.menuOpen ? 'fadeIn' : 'fadeOut'}`}>
         <HeaderContainer>
           <section>
             {this.props.isSubpage
