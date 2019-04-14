@@ -123,7 +123,7 @@ class LanguageDrawer extends React.Component {
           </Hamburger>
         </HeaderContainer>
         <LanguageContainer>
-          <h1>Languages</h1>
+          <h1>{this.props.header}</h1>
           <p>Nact documentation is available in the following languages<br />
              Nact 문서는 다음 언어로 제공됩니다.</p>
           <LanguageSection>

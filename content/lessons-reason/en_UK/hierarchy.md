@@ -4,7 +4,7 @@ lesson: 4
 chapter: 2
 date: "11/12/2017"
 programming_language:  "reasonml"
-language: en_UK
+language: en_uk
 type: "lesson"
 tags:
     - getting-started

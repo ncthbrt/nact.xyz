@@ -2,7 +2,7 @@
 title: "Persistent Queries"
 date: "2018-05-19"
 type: "post"
-language: en_UK
+language: en_uk
 tags: []    
 ---
 Version 7.1.0 of NactJS and version 4.1.0 of ReasonNact added a new feature, Persistent Queries, which should go some way to supporting patterns like CQRS (which is something I have been asked a few times about). 

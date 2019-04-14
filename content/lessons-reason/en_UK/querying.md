@@ -3,7 +3,7 @@ title: "Querying"
 lesson: 3
 chapter: 2
 date: "11/12/2017"
-language: en_UK
+language: en_uk
 programming_language:  "reasonml"
 type: "lesson"
 tags:

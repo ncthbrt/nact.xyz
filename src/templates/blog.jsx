@@ -52,7 +52,7 @@ export default class Blog extends React.Component {
           <h1>
             Blog
           </h1>
-          {postNodes.sort(dateSort).reduce((prev, x, i) => [...prev, prev ? <hr key={i+'hr'} /> : undefined, <PostTemplate key={i} node={x.node} />], undefined)}
+          {postNodes.sort(dateSort).reduce((prev, x, i) => [...prev, prev ? <hr key={i + 'hr'} /> : undefined, <PostTemplate key={i} node={x.node} />], undefined)}
         </BodyContents>
       </div>
     );

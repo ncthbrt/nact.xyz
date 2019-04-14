@@ -3,7 +3,7 @@ title: "Decoders and Encoders"
 lesson: 2
 chapter: 4
 date: "28/01/2018"
-language: en_UK
+language: en_uk
 programming_language:  "reasonml"
 type: "lesson"
 tags:

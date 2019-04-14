@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import LanguageDrawer from './LanguageDrawer';
+import siteConfig from '../../../data/SiteConfig';
 require('../../../node_modules/animate.css/animate.min.css');
 
 const NavContainer = styled.div`
@@ -149,12 +150,14 @@ class Navigation extends React.Component {
   }
 
   render () {
+    const homePageLink = `/${this.props.language === 'en_uk' ? '' : this.props.language}`;
+
     return (
       <NavContainer isSubpage={this.props.isSubpage}>
         <section>
           {this.props.isSubpage
-            ? <Link className='nav-link' to='/' ><img style={{ height: '1.5em' }} alt='logo' src='/logos/logo-wide.svg' /></Link>
-            : <Link className='nav-link' to='/' ><img style={{ height: '1.5em' }} alt='logo' src='/logos/logo-wide-inverted.svg' /></Link>
+            ? <Link className='nav-link' to={homePageLink} ><img style={{ height: '1.5em' }} alt='logo' src='/logos/logo-wide.svg' /></Link>
+            : <Link className='nav-link' to={homePageLink} ><img style={{ height: '1.5em' }} alt='logo' src='/logos/logo-wide-inverted.svg' /></Link>
           }
         </section>
         <Hamburger className={this.props.isSubpage ? ' ' : 'animated fadeIn'}>
@@ -172,14 +175,14 @@ class Navigation extends React.Component {
               <svg style={{ height: '1em' }} width='24' height='24' viewBox='0 0 24 24'>
                 <path fill={this.props.isSubpage ? 'white' : '#FC5B5B'} d='M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z' />
               </svg>
-              LANGUAGE<sup>*</sup>
+              {siteConfig.headers[this.props.language].language.toUpperCase()}<sup>*</sup>
             </a>
           </div>
-          <div><Link className='nav-link' to='/blog' > BLOG </Link></div>
-          <div><Link className='nav-link' to='/community' > COMMUNITY </Link></div>
-          <div><a className='nav-link' href='https://github.com/ncthbrt/nact'> GITHUB </a></div>
+          {/* <div><Link className='nav-link' to='/blog' > {siteConfig.headers[this.props.language].blog.toUpperCase()} </Link></div> */}
+          <div><Link className='nav-link' to={`/${this.props.language}/community`} > {siteConfig.headers[this.props.language].community.toUpperCase()} </Link></div>
+          <div><a className='nav-link' href='https://github.com/ncthbrt/nact'> {siteConfig.headers[this.props.language].github.toUpperCase()} </a></div>
         </NavLinks>
-        <LanguageDrawer closeDrawer={() => this.closeLanguageDrawer()} menuOpen={this.state.languageMenuOpen} />
+        <LanguageDrawer header={siteConfig.headers[this.props.language].language} closeDrawer={() => this.closeLanguageDrawer()} menuOpen={this.state.languageMenuOpen} />
       </NavContainer>
     );
   }

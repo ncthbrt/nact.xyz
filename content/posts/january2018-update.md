@@ -2,7 +2,7 @@
 title: "January 2018 Update"
 date: "2018-01-30"
 type: "post"
-language: en_UK
+language: en_uk
 tags: []    
 ---
 ## New features

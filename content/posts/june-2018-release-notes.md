@@ -2,7 +2,7 @@
 title: "ReasonNact v5.0.0 Release Notes"
 date: "2018-06-06"
 type: "post"
-language: en_UK
+language: en_uk
 tags: []    
 ---
 ReasonNact's latest release is a breaking change. In previous versions, the initial state was supplied as a plain value. *Now* the initial state must be specified as a function which takes in the actor's context. (See [Stateful Actors](/lesson/reasonml/stateful-actors) ) for an example).

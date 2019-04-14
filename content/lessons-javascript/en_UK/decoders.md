@@ -5,7 +5,7 @@ chapter: 4
 date: "28/01/2018"
 programming_language:  "javascript"
 type: "lesson"
-language: en_UK
+language: en_uk
 tags:
     - getting-started
     - nact

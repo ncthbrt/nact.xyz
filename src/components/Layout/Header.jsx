@@ -6,27 +6,24 @@ require('../../../node_modules/animate.css/animate.min.css');
 
 class MainHeader extends React.Component {
   getHeader () {
-    if (this.props.location) {
-      if (this.props.location.pathname === '/') {
-        return (
-          <IndexHeadContainer>
-            <Navigation />
-            <Hero >
-              <img className='animated flipInX' src={this.props.logo} style={{ maxWidth: '80vw', maxHeight: '70vh' }} />
-              <Title className='animated fadeIn'>nact ⇒ node.js + actors</Title>
-              <SubTitle className='animated fadeIn' style={{ fontStyle: 'italic' }}> your services have never been so µ</SubTitle>
-            </Hero>
-          </IndexHeadContainer>
-        );
-      } else {
-        return (
-          <SiteContainer>
-            <Navigation isSubpage />
-          </SiteContainer>
-        );
-      }
+    if (this.props.isMain) {
+      return (
+        <IndexHeadContainer>
+          <Navigation language={this.props.language} isSubpage={false} />
+          <Hero >
+            <img className='animated flipInX' src={this.props.logo} style={{ maxWidth: '80vw', maxHeight: '70vh' }} />
+            <Title className='animated fadeIn'>nact ⇒ node.js + actors</Title>
+            <SubTitle className='animated fadeIn' style={{ fontStyle: 'italic' }}>{this.props.siteTitleAlt}</SubTitle>
+          </Hero>
+        </IndexHeadContainer>
+      );
+    } else {
+      return (
+        <SiteContainer>
+          <Navigation isSubpage language={this.props.language} />
+        </SiteContainer>
+      );
     }
-    return <div />;
   }
 
   render () {

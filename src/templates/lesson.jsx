@@ -27,7 +27,7 @@ export default class LessonTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <BodyGrid>
           <HeaderContainer className='header'>
-            <SiteHeader location={this.props.location} />
+            <SiteHeader location={this.props.location} language={language} />
           </HeaderContainer>
           <BodyContainer className='content'>
             <article>

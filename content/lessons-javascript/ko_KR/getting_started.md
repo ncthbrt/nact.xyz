@@ -5,7 +5,7 @@ chapter: 1
 date: "22/03/2019"
 programming_language:  "javascript"
 type: "lesson"
-language: ko_KR
+language: ko_kr
 tags:
     - getting-started
     - nact
