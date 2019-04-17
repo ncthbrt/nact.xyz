@@ -27,9 +27,9 @@ class CommunityPage extends React.Component {
             logo={config.siteLogo}
           />
           <BodyContainer>
-            <h1>Community</h1>
-            <p>Nact is developed in the open. Development activities are hosted on <a href='https://github.com/ncthbrt/nact'>github</a>.
-             If you have any questions, or just want to say “Hi!”, please visit the discord below: </p>
+            <h1>커뮤니티</h1>
+            <p>Nact는 오픈소스 프로젝트입니다. 소스코드를 포함한 개발에 관한 모든 내용은 <a href='https://github.com/ncthbrt/nact'>github</a>에서 호스팅하고 있습니다.
+             질문 사항이나 궁금한 점이 있거나, 프로젝트 컨트리뷰터와 대화를 나누고 싶으시면 아래 Discord 채팅을 이용해주세요.</p>
             <iframe src='https://discordapp.com/widget?id=392625718682714112&theme=light' width='350' height='500' allowTransparency='true' frameBorder='0' />
           </BodyContainer>
         </main>
