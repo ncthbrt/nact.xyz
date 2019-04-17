@@ -94,13 +94,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           });
         });
-      }).then(() => {
-        createPage({
-          path: `/blog`,
-          component: blogPage,
-          context: {}
-        });
       })
+      // .then(() => {
+      //   createPage({
+      //     path: `/blog`,
+      //     component: blogPage,
+      //     context: {}
+      //   });
+      // })
     );
   });
 };
