@@ -58,4 +58,6 @@ public/
 # Bundle stats
 bundle-stats.json
 
-.idea/workspace.xml
+.idea/
+.vscode/
+.DS_Store
