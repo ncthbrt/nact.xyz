@@ -20,7 +20,6 @@
 <url> <loc>https://nact.io/en_uk/lesson/javascript/persist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/en_uk/lesson/javascript/persistent-queries</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/en_uk/lesson/javascript/snapshotting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/en_uk/lesson/javascript/supervision</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/en_uk/lesson/javascript/stateful-actors</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/en_uk/lesson/javascript/timeouts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/인코더-디코더</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,10 +31,11 @@
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/퍼시스턴트-쿼리</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/스냅샷</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/상태가-있는-액터</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://nact.io/ko_kr/lesson/javascript/관리-감독-supervision</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/타임아웃</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/en_uk/lesson/javascript/querying</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/ko_kr/lesson/javascript/질의하기</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/en_uk/lesson/javascript/supervision</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://nact.io/ko_kr/lesson/javascript/관리-감독-supervision</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/nact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://nact.io/tags/reason/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
