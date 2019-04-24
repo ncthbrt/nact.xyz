@@ -64,7 +64,7 @@ const resetWithExponentialDelay = factor => {
 저번에 만든 주소록 서비스 액터에 관리 감독 정책 함수를 등록합니다.
 
 ```javascript
-const spawnContactsService = parent => spawnStateless(
+const spawnContactsService = parent => spawn(
   parent,
   (msg, ctx) => {
     const userId = msg.userId
@@ -81,4 +81,4 @@ const spawnContactsService = parent => spawnStateless(
 )
 ```
 
-`spawnStateless` 함수의 네번째 파라미터는 액터 속성 객체입니다. 여기에는 `onChildCrashes`를 비롯해서 다양한 액터의 동작을 지정할 수 있습니다. 이후의 장에서 더 살펴보겠습니다.
+`spawn` 함수의 네번째 파라미터는 액터 속성 객체입니다. 여기에는 `onCrash`를 비롯해서 다양한 액터의 동작을 지정할 수 있습니다. 이후의 장에서 더 살펴보겠습니다.

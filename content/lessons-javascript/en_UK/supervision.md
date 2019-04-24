@@ -17,7 +17,7 @@ This thesis is motivated by a desire to reduce the amount of infrastructural cod
 
 How on earth do we achieve system resilience if we just let our actors crash? The answer lies in supervision: If an actor crashes, a policy defined on the actor has an opportunity to make a decision about what to do about the fault. Erlang was one of the first platforms to adopt this strategy for dealing with faults, and was used to achieve jaw dropping reliability when building out the Ericsson telephone exchanges (on the order of nine 9s of availability). 
 
-Nact's supervision system works similar to that of Erlang. If an actor crashes, it is stopped by default. Specifying the `onCrash` option allows one to override the supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, and the context of the actor. The supervision policy returns a decision (which may be asynchronous). The available decisions are enumerated in the following table:
+Nact's supervision system works similar to that of Erlang. If a *stateful* actor crashes, it is stopped by default. Specifying the `onCrash` option allows one to override a stateful actor's supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, and the context of the actor. The supervision policy returns a decision (which may be asynchronous). The available decisions are enumerated in the following table:
 
 <table class='definitions'>
     <thead>
@@ -91,7 +91,7 @@ const resetWithExponentialDelay = (factor) => {
 Let us modify our contacts service from the previous example to actually use the supervision policy:
 
 ```js
-const spawnContactsService = (parent) => spawnStateless(
+const spawnContactsService = (parent) => spawn(
   parent,
   (msg, ctx) => {
     const userId = msg.userId;
@@ -109,4 +109,4 @@ const spawnContactsService = (parent) => spawnStateless(
 ```
 
 The fourth parameter to spawnStateless is the actor property object. 
-This object specifies various other behaviors of actors besides `onChildCrashes` and will be expanded upon in later sections. 
+This object specifies various other behaviors of actors besides `onCrash` and will be expanded upon in later sections. 
