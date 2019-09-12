@@ -108,5 +108,5 @@ const spawnContactsService = (parent) => spawn(
 );
 ```
 
-The fourth parameter to spawnStateless is the actor property object. 
+The fourth parameter to spawn is the actor property object. 
 This object specifies various other behaviors of actors besides `onCrash` and will be expanded upon in later sections. 
