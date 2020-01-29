@@ -12,7 +12,7 @@ tags:
     - javascript
     - nodejs
 ---
-Nact is an implementation of the actor model for Node.js. It is inspired by the approaches taken by [Akka](getakka.net) and [Erlang](https://erlang.com). Additionally it attempts to provide a familiar interface to users coming from Redux. 
+Nact is an implementation of the actor model for Node.js. It is inspired by the approaches taken by [Akka](getakka.net) and [Erlang](https://erlang.org). Additionally it attempts to provide a familiar interface to users coming from Redux. 
 
 The goal of the project is to provide a simple way to create and reason about µ-services and asynchronous event driven architectures in Node.js.
 
