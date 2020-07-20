@@ -153,7 +153,7 @@ app.get('/api/contacts/:contact_id', async (req,res) => {
   const contactId = req.params.contact_id;
   const msg = { type: GET_CONTACT, contactId };
   try {
-    const result = await query(contactService, msg, 250); // Set a 250ms timeout
+    const result = await query(contactService, (sender) => Object.assign(msg, {sender}), 250); // Set a 250ms timeout
     switch(result.type) {
       case SUCCESS: res.json(result.payload); break;
       case NOT_FOUND: res.sendStatus(404); break;
@@ -175,7 +175,7 @@ Now this is a bit of boilerplate for each endpoint, but could be refactored so a
 ```js
 const performQuery = async (msg, res) => {
   try {
-    const result = await query(contactsService, msg, 500); // Set a 250ms timeout
+    const result = await query(contactsService, (sender) => Object.assign(msg, {sender}), 500); // Set a 250ms timeout
     switch(result.type) {
       case SUCCESS: res.json(result.payload); break;
       case NOT_FOUND: res.sendStatus(404); break;

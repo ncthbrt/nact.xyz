@@ -37,12 +37,12 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 690
-            }
-          },
+          // {
+          //   resolve: 'gatsby-remark-images',
+          //   options: {
+          //     maxWidth: 690
+          //   }
+          // },
           {
             resolve: 'gatsby-remark-responsive-iframe'
           },
@@ -64,7 +64,7 @@ module.exports = {
         color: config.themeColor
       }
     },
-    'gatsby-plugin-sharp',
+    // 'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
