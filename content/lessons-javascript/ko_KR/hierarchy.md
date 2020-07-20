@@ -68,7 +68,7 @@ const spawnContactsService = (parent) => spawnStateless(
     } else {
       childActor = spawnUserContactService(ctx.self, userId)            
     }
-    dispatch(childActor, msg, ctx.sender)
+    dispatch(childActor, msg)
   },
   'contacts'
 )

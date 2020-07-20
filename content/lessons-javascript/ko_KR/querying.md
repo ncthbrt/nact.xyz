@@ -103,16 +103,15 @@ const contactsService = spawn(
     if (msg.type === GET_CONTACTS) {
       // 모든 연락처를 배열로 반환
       dispatch(
-        ctx.sender, 
-        { payload: Object.values(state.contacts), type: SUCCESS }, 
-        ctx.self
+        msg.sender, 
+        { payload: Object.values(state.contacts), type: SUCCESS, sender: ctx.self }
       )
     } else if (msg.type === CREATE_CONTACT) {
       const newContact = { id: uuid(), ...msg.payload }
       const nextState = { 
         contacts: { ...state.contacts, [newContact.id]: newContact } 
       }
-      dispatch(ctx.sender, { type: SUCCESS, payload: newContact })
+      dispatch(msg.sender, { type: SUCCESS, payload: newContact })
       return nextState
     } else {
       // 이미 존재하는 연락처가 있는지 확인
@@ -121,13 +120,13 @@ const contactsService = spawn(
       if (contact) {
           switch(msg.type) {
             case GET_CONTACT: {
-              dispatch(ctx.sender, { payload: contact, type: SUCCESS })
+              dispatch(msg.sender, { payload: contact, type: SUCCESS })
               break
             }
             case REMOVE_CONTACT: {
               // 특정 연락처 항목을 undefined로 변경한 새 상태 반환
               const nextState = { ...state.contacts, [contact.id]: undefined }
-              dispatch(ctx.sender, { type: SUCCESS, payload: contact })
+              dispatch(msg.sender, { type: SUCCESS, payload: contact })
               return nextState
             }
             case UPDATE_CONTACT: {
@@ -137,16 +136,15 @@ const contactsService = spawn(
                 ...state.contacts,
                 [contact.id]: updatedContact 
               }
-              dispatch(ctx.sender, { type: SUCCESS, payload: updatedContact })
+              dispatch(msg.sender, { type: SUCCESS, payload: updatedContact })
               return nextState                 
             }
           }
       } else {
         // 기존 연락처가 존재하지 않으면 NOT_FOUND 메시지를 요청자에게 응답
         dispatch(
-          ctx.sender, 
-          { type: NOT_FOUND, contactId: msg.contactId }, 
-          ctx.self
+          msg.sender, 
+          { type: NOT_FOUND, contactId: msg.contactId, sender: ctx.self }, 
         )
       }
     }      
@@ -166,7 +164,7 @@ app.get('/api/contacts/:contact_id', async (req, res) => {
   const contactId = req.params.contact_id
   const msg = { type: GET_CONTACT, contactId }
   try {
-    const result = await query(contactService, msg, 250) // 타임아웃 250ms 설정
+    const result = await query(contactService, (sender) => Object.assign(msg, {sender}), 250) // 타임아웃 250ms 설정
     switch(result.type) {
       case SUCCESS:
         res.json(result.payload)
@@ -192,7 +190,7 @@ app.get('/api/contacts/:contact_id', async (req, res) => {
 ```javascript
 const performQuery = async (msg, res) => {
   try {
-    const result = await query(contactsService, msg, 500) // 타임아웃 250ms 설정
+    const result = await query(contactsService, (sender) => Object.assign(msg, {sender}), 500) // 타임아웃 250ms 설정
     
     switch(result.type) {
       case SUCCESS:

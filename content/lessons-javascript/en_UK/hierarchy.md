@@ -59,7 +59,7 @@ const spawnContactsService = (parent) => spawnStateless(
     } else {
       childActor = spawnUserContactService(ctx.self, userId);            
     }
-    dispatch(childActor, msg, ctx.sender);
+    dispatch(childActor, msg);
   },
   'contacts'
 );
@@ -71,7 +71,7 @@ To complete the example, we finally adjust the API endpoints:
 
 ```js
 
-app.get('/api/:user_id/contacts', (req,res) => performQuery({ type: GET_CONTACTS, userId: req.params.user_id }, res));
+app.get('/api/:user_id/contacts', (req, res) => performQuery({ type: GET_CONTACTS, userId: req.params.user_id }, res));
 
 app.get('/api/:user_id/contacts/:contact_id', (req,res) => 
   performQuery({ type: GET_CONTACT, userId: req.params.user_id, contactId: req.params.contact_id }, res)

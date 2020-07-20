@@ -40,7 +40,7 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
   parent,
   async (state = { contacts:{} }, msg, ctx) => {    
     if (msg.type === GET_CONTACTS) {        
-      dispatch(ctx.sender, { payload: Object.values(state.contacts), type: SUCCESS })
+      dispatch(msg.sender, { payload: Object.values(state.contacts), type: SUCCESS })
     } else if (msg.type === CREATE_CONTACT) {
       const newContact = { id: uuid(), ...msg.payload };
       const nextState = { contacts: { ...state.contacts, [newContact.id]: newContact } }
@@ -53,14 +53,14 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
       }
 
       // 복구중에는 `dispatch`를 해도 안전하다. (아무 액터에게도 보내지 않으며, 무시된다.)
-      dispatch(ctx.sender, { type: SUCCESS, payload: newContact })
+      dispatch(msg.sender, { type: SUCCESS, payload: newContact })
       return nextState
     } else {
       const contact = state.contacts[msg.contactId]
       if (contact) {
         switch(msg.type) {
           case GET_CONTACT: {
-            dispatch(ctx.sender, { payload: contact, type: SUCCESS }, ctx.self)
+            dispatch(msg.sender, { payload: contact, type: SUCCESS, sender: ctx.self })
             break
           }
           case REMOVE_CONTACT: {
@@ -68,7 +68,7 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
             if (!ctx.recovering) {
               await ctx.persist(msg)
             }
-            dispatch(ctx.sender, { type: SUCCESS, payload: contact }, ctx.self)
+            dispatch(msg.sender, { type: SUCCESS, payload: contact, sender: ctx.self })
             return nextState
           }
           case UPDATE_CONTACT:  {
@@ -77,12 +77,12 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
             if (!ctx.recovering) {
               await ctx.persist(msg)
             }                
-            dispatch(ctx.sender, { type: SUCCESS, payload: updatedContact }, ctx.self)
+            dispatch(msg.sender, { type: SUCCESS, payload: updatedContact, sender: ctx.self })
             return nextState
           }
         }
       } else {          
-        dispatch(ctx.sender, { type: NOT_FOUND, contactId: msg.contactId }, ctx.sender)
+        dispatch(msg.sender, { type: NOT_FOUND, contactId: msg.contactId, sender: ctx.self })
       }
     }
     return state

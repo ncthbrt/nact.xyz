@@ -20,28 +20,29 @@ tags:
 
 An actor alone is a somewhat useless construct; actors need to work together. Actors can send messages to one another by using the `dispatch` method. 
 
-The third parameter of `dispatch` is the sender. This parameter is very useful in allowing an actor to service requests without knowing explicitly who the sender is.
+References to other actors can be included in a given message, allowing actors to randomly address one another.
 
-In this example, the actors Ping and Pong are playing a perfect ping-pong match. To start the match, we dispatch a message to Ping as Pong use this third parameter. 
+In this example, the actors Ping and Pong are playing a perfect ping-pong match. To start the match, we dispatch a message to Ping with Pong set as the sender in the message
 
 
 ```js
 const delay = (time) => new Promise((res) => setTimeout(res, time));
 
 const ping = spawnStateless(system, async (msg, ctx) =>  {
-  console.log(msg);
+  console.log(msg.value);
   // ping: Pong is a little slow. So I'm giving myself a little handicap :P
   await delay(500);
-  dispatch(ctx.sender, ctx.name, ctx.self);
+  dispatch(msg.sender, { value: ctx.name, sender: ctx.self });
 }, 'ping');
 
 const pong = spawnStateless(system, (msg, ctx) =>  {
-  console.log(msg);
-  dispatch(ctx.sender, ctx.name, ctx.self);  
+  console.log(msg.value);
+  dispatch(msg.sender, { value: ctx.name, sender: ctx.self });
 }, 'pong');
 
-dispatch(ping, 'begin', pong);
+dispatch(ping, { value: 'begin' sender:pong });
 ```
+
 This produces the following console output:
 
 ``` 
@@ -53,4 +54,3 @@ pong
 ping
 etc...
 ```
-

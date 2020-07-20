@@ -39,7 +39,7 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
   parent,
   async (state = { contacts:{} }, msg, ctx) => {    
     if(msg.type === GET_CONTACTS) {        
-      	dispatch(ctx.sender, { payload: Object.values(state.contacts), type: SUCCESS });
+      	dispatch(msg.sender, { payload: Object.values(state.contacts), type: SUCCESS });
     } else if (msg.type === CREATE_CONTACT) {
         const newContact = { id: uuid(), ...msg.payload };
         const nextState = { contacts: { ...state.contacts, [newContact.id]: newContact } };
@@ -52,32 +52,32 @@ const spawnUserContactService = (parent, userId) => spawnPersistent(
       	
       	// Safe to dispatch while recovering. 
       	// The message just goes to Nobody and is ignored.      
-        dispatch(ctx.sender, { type: SUCCESS, payload: newContact });            
+        dispatch(msg.sender, { type: SUCCESS, payload: newContact });            
         return nextState;
     } else {
         const contact = state.contacts[msg.contactId];
         if (contact) {
             switch(msg.type) {
               case GET_CONTACT: {
-                dispatch(ctx.sender, { payload: contact, type: SUCCESS }, ctx.self);
+                dispatch(msg.sender, { payload: contact, type: SUCCESS, sender: ctx.self });
                 break;
               }
               case REMOVE_CONTACT: {
                 const nextState = { ...state.contacts, [contact.id]: undefined };
                 if(!ctx.recovering) { await ctx.persist(msg); }
-                dispatch(ctx.sender, { type: SUCCESS, payload: contact }, ctx.self);                  
+                dispatch(msg.sender, { type: SUCCESS, payload: contact, sender: ctx.self });                  
                 return nextState;                 
               }
               case UPDATE_CONTACT:  {
                 const updatedContact = {...contact, ...msg.payload };
                 const nextState = { ...state.contacts, [contact.id]: updatedContact };
                 if(!ctx.recovering) { await ctx.persist(msg); }                
-                dispatch(ctx.sender,{ type: SUCCESS, payload: updatedContact }, ctx.self);                
+                dispatch(msg.sender,{ type: SUCCESS, payload: updatedContact, sender: ctx.self });                
                 return nextState;                 
               }
             }
         } else {          
-          dispatch(ctx.sender, { type: NOT_FOUND, contactId: msg.contactId }, ctx.sender);
+          dispatch(msg.sender, { type: NOT_FOUND, contactId: msg.contactId, sender: ctx.self });
         }
     }
     return state;

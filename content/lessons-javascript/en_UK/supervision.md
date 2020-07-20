@@ -101,7 +101,7 @@ const spawnContactsService = (parent) => spawn(
     } else {
       childActor = spawnUserContactService(ctx.self, userId);            
     }
-    dispatch(childActor, msg, ctx.sender);
+    dispatch(childActor, msg);
   },
   'contacts',
   { onCrash: reset }

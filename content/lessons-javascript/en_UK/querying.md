@@ -92,16 +92,15 @@ const contactsService = spawn(
     if(msg.type === GET_CONTACTS) {
         // Return all the contacts as an array
         dispatch(
-          ctx.sender, 
-          { payload: Object.values(state.contacts), type: SUCCESS }, 
-          ctx.self
+          msg.sender, 
+          { payload: Object.values(state.contacts), type: SUCCESS, sender: ctx.self }          
         );
     } else if (msg.type === CREATE_CONTACT) {
         const newContact = { id: uuid(), ...msg.payload };
         const nextState = { 
           contacts: { ...state.contacts, [newContact.id]: newContact } 
         };
-        dispatch(ctx.sender, { type: SUCCESS, payload: newContact });
+        dispatch(msg.sender, { type: SUCCESS, payload: newContact });
         return nextState;
     } else {
         // All these message types require an existing contact
@@ -110,13 +109,13 @@ const contactsService = spawn(
         if (contact) {
             switch(msg.type) {
               case GET_CONTACT: {
-                dispatch(ctx.sender, { payload: contact, type: SUCCESS });
+                dispatch(msg.sender, { payload: contact, type: SUCCESS });
                 break;
               }
               case REMOVE_CONTACT: {
                 // Create a new state with the contact value to undefined
                 const nextState = { ...state.contacts, [contact.id]: undefined };
-                dispatch(ctx.sender, { type: SUCCESS, payload: contact });
+                dispatch(msg.sender, { type: SUCCESS, payload: contact });
                 return nextState;                 
               }
               case UPDATE_CONTACT:  {
@@ -127,14 +126,14 @@ const contactsService = spawn(
                   ...state.contacts,
                   [contact.id]: updatedContact 
                 };
-                dispatch(ctx.sender, { type: SUCCESS, payload: updatedContact });
+                dispatch(msg.sender, { type: SUCCESS, payload: updatedContact });
                 return nextState;                 
               }
             }
         } else {
           // If it does not, dispatch a not found message to the sender          
           dispatch(
-            ctx.sender, 
+            msg.sender, 
             { type: NOT_FOUND, contactId: msg.contactId }, 
             ctx.self
           );
