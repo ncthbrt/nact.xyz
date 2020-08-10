@@ -40,7 +40,7 @@ const pong = spawnStateless(system, (msg, ctx) =>  {
   dispatch(msg.sender, { value: ctx.name, sender: ctx.self });
 }, 'pong');
 
-dispatch(ping, { value: 'begin' sender:pong });
+dispatch(ping, { value: 'begin', sender: pong });
 ```
 
 This produces the following console output:
