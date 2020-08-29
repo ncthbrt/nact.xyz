@@ -84,8 +84,6 @@ Because actors are message driven, let us define the message types used between 
 Our contacts actor will need to handle each message type:
 
 ```js
-const uuid = require('uuid/v4');
-
 const contactsService = spawn(
   system,
   (state = { contacts:{} }, msg, ctx) => {    
@@ -96,7 +94,7 @@ const contactsService = spawn(
           { payload: Object.values(state.contacts), type: SUCCESS, sender: ctx.self }          
         );
     } else if (msg.type === CREATE_CONTACT) {
-        const newContact = { id: uuid(), ...msg.payload };
+        const newContact = { ...msg.payload };
         const nextState = { 
           contacts: { ...state.contacts, [newContact.id]: newContact } 
         };
@@ -195,13 +193,15 @@ const performQuery = async (msg, res) => {
 This would allow us to define the endpoints as follows:
 
 ```js
+const uuid = require('uuid/v4');
+
 app.get('/api/contacts', (req,res) => performQuery({ type: GET_CONTACTS }, res));
 
 app.get('/api/contacts/:contact_id', (req,res) => 
   performQuery({ type: GET_CONTACT, contactId: req.params.contact_id }, res)
 );
 
-app.post('/api/contacts', (req,res) => performQuery({ type: CREATE_CONTACT, payload: req.body }, res));
+app.post('/api/contacts', (req,res) => performQuery({ type: CREATE_CONTACT, payload: {...req.body, id: uuid() } }, res));
 
 app.patch('/api/contacts/:contact_id', (req,res) => 
   performQuery({ type: UPDATE_CONTACT, contactId: req.params.contact_id, payload: req.body }, res)
