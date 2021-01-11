@@ -17,7 +17,7 @@ This thesis is motivated by a desire to reduce the amount of infrastructural cod
 
 How on earth do we achieve system resilience if we just let our actors crash? The answer lies in supervision: If an actor crashes, a policy defined on the actor has an opportunity to make a decision about what to do about the fault. Erlang was one of the first platforms to adopt this strategy for dealing with faults, and was used to achieve jaw dropping reliability when building out the Ericsson telephone exchanges (on the order of nine 9s of availability). 
 
-Nact's supervision system works similar to that of Erlang. If a *stateful* actor crashes, it is stopped by default. Specifying the `onCrash` option allows one to override a stateful actor's supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, and the context of the actor. The supervision policy returns a decision (which may be asynchronous). The available decisions are enumerated in the following table:
+Nact's supervision system works similar to that of Erlang. If a *stateful* actor crashes, it escalates the error to the actor's parent where it will be stopped by the system if a parent does not intercede. Specifying the `onCrash` option allows one to override a stateful actor's supervision policy. A custom supervision policy is a function which takes in the exception which was thrown, the message which was being processed at the time at which the fault occurred, the context of the actor, and if the fault was escalated, than also the context of the child actor. The supervision policy returns a decision (which may be asynchronous). The available decisions are enumerated in the following table:
 
 <table class='definitions'>
     <thead>
@@ -36,6 +36,14 @@ Nact's supervision system works similar to that of Erlang. If a *stateful* actor
         <td align='left'>Stops the peers of the faulted actor</td>
       </tr>
       <tr>
+        <td align='left'>stopChild</td>
+        <td align='left'>Resumes actor and stops the faulted child of the actor</td>
+      </tr>
+      <tr>
+        <td align='left'>stopAllChildren</td>
+        <td align='left'>Resumes actor and stops all the children of the actor</td>
+      </tr>
+      <tr>
         <td align='left'>reset</td>
         <td align='left'>Resets the state of the faulted actor</td>
       </tr>
@@ -44,21 +52,44 @@ Nact's supervision system works similar to that of Erlang. If a *stateful* actor
         <td align='left'>Resets the state of the faulted actor's peers</td>
       </tr>
       <tr>
+        <td align='left'>resetChild</td>
+        <td align='left'>Resumes actor and resets the state of the faulted child of the actor</td>
+      </tr>
+      <tr>
+        <td align='left'>resetAllChildren</td>
+        <td align='left'>Resumes actor and resets the state of all the children of the actor</td>
+      </tr>
+      <tr>
         <td align='left'>resume</td>
         <td align='left'>Continue processing the next messages in the actor's mailbox</td>
       </tr>
       <tr>
         <td align='left'>escalate</td>
-        <td align='left'>Sends the fault to the grandparent of the faulted actor</td>
+        <td align='left'>Sends the fault to the parent of the faulted actor</td>
       </tr>
     </tbody>
   </table>
 
-Here is an example of a supervision policy which resets the faulted child each time:
+Here is an example of a supervision policy which resets the faulted actor each time:
 
 ```js
 const reset = (msg, error, ctx) => ctx.reset;
 ```
+
+Here is an example of a supervision policy which resets the faulted child actor each time when the child escalates the fault to the parent actor:
+
+```js
+const resetIfChild = (msg, error, ctx, child) => {
+  if (child) {   
+    return ctx.resetChild;
+  }
+  else {
+    return ctx.stop;
+  }
+}
+```
+
+It's important to note, that the forth parameter, `child`, will only be present when a child actor escalates the error to its parent.
 
 Perhaps your fault is caused by a resource not being available yet.
 In that case, we don't want to continually restart the actor as that'll just waste precious CPU cycles. So we'd change the supervision policy to delay the reset:
