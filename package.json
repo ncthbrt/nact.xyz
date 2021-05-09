@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^1.4.2",
     "gatsby-transformer-remark": "^1.7.0",
     "husky": "^0.14.3",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
